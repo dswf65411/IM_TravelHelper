@@ -1,0 +1,264 @@
+body{
+	background: rgb(224,224,224);
+	font-size: 1.5em;
+	font-family: monospace;
+	color: rgb(79,79,79);
+}
+.header{
+	position: fixed;
+	background: rgb(255,255,255);
+	height: 70px;
+	width: 100%;
+	z-index: 5;
+}
+a:visited{
+	color: rgb(79,79,79);
+}
+.logo-text{
+	display: inline-block;
+	font-size: 1.5em;
+	float: left;
+	line-height: 65px;
+	margin-left: 10px;
+	text-decoration: none;
+	color: rgb(79,79,79);
+}
+.logo{
+	height: 70px;
+	margin-left: 20px;
+	float: left;
+}
+#login-register{
+	float: right;
+	margin-right: 40px;
+	font-size: 1.5em;
+	line-height: 65px;
+}
+.login{
+	display: inline-block;
+	margin-right: 10px;
+	color: rgb(34,168,170);
+}
+.select{
+	float: left;
+	position: relative;
+	background: rgb(255,255,255);
+	width: 25%;
+	height: 720px;
+	top: 100px;
+	left: 7%;
+}
+.choose{
+	position: relative;
+	height: 16%;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(79,79,79);
+	border-bottom-width: 1px;
+}
+#choose{
+	margin-left: 11%;
+	line-height: 300%;
+}
+.category{
+	list-style: none;
+	width: 80%;
+	height: 30%;
+	margin-left: 10%;
+	text-align: center;
+	line-height: 200%;
+	border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(224,224,224);
+    color: rgb(34,168,170);
+}
+.category:hover{
+	background: rgb(34,168,170);
+	color: rgb(255,255,255);
+}
+.category ul{
+	display: none;
+	background: rgb(224,224,224);
+	color: rgb(34,168,170);
+	width: 100%;
+	max-height: 275px;
+	overflow: auto;
+	border:2px solid;
+	border-radius: 10px;
+	border-color: rgb(224,224,224);
+	z-index: 0;
+}
+.category:hover ul{
+	display: block;
+} 
+.category ul li:hover{
+	background: rgb(34,168,170);
+	color: rgb(255,255,255);
+}
+#area{
+	z-index: 3;
+}
+#school{
+	z-index: 2;
+}
+#product{
+	z-index: 1;
+}
+.tourcategory{
+	list-style: none;
+	float: left;
+	margin-left: 11%;
+	height: 40%;
+	width:80%;
+	border:2px solid;
+	line-height: 200%;
+	border-color: rgb(255,255,255);
+}
+.tourcategory:hover{
+	background: rgb(224,224,224);
+	color: rgb(0,0,0);
+}
+.tour{
+	float: left;
+	position: relative;
+	width: 55%;
+	height: auto;
+	top: 100px;
+	left: 10%;
+}
+.intro{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	line-height: 150%;
+	height: 70px;
+	font-size: 225%;
+}
+.rank{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	text-align: left;
+	z-index: 4;
+}
+#rank{
+	list-style: none;
+	width: 24%;
+	height: 30px;
+	margin-left: 1%;
+	text-align: center;
+	line-height: 150%;
+	border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(224,224,224);
+    color: rgb(34,168,170);
+}
+#rank:hover{
+	background: rgb(34,168,170);
+	color: rgb(255,255,255);
+}
+#rank ul{
+	display: none;
+	background: rgb(255,255,255);
+	color: rgb(34,168,170);
+	width: 100%;
+	max-height: 275px;
+	overflow: auto;
+	border:2px solid;
+	border-radius: 10px;
+	border-color: rgb(224,224,224);
+	z-index: 4;
+}
+#rank:hover ul{
+	display: block;
+} 
+#rank ul li:hover{
+	background: rgb(34,168,170);
+	color: rgb(255,255,255);
+}
+.tourlink{
+	text-decoration: none;
+	color: rgb(79,79,79);
+}
+.tourlist{
+	position: relative;
+	top: 5px;
+	width: 100%;
+	height: 265px;
+	background: white;
+}
+.tourp{
+	position: relative;
+	float: left;
+	height: 90%;
+}
+.tourtitle{
+	position: relative;
+	float: left;
+	top: 10px;
+	left: 2%;
+	height: 70px;
+	width: 360px;
+	line-height: 1.5em;
+}
+.space{
+	position: relative;
+	width: 100%;
+	height: 15px;
+}
+.tourplace{
+	position: relative;
+	float: left;
+	left: 2%;
+	height: 40px;
+	width: 250px;
+	line-height: 2em;
+	top: 10px;
+}
+.tourplacep{
+	position: relative;
+	float: left;
+	height: 100%;
+}
+.tourhour{
+	position: relative;
+	float: left;
+	left: 2%;
+	height: 40px;
+	width: 250px;
+	line-height: 2em;
+	top: 15px;
+}
+.price{
+	position: relative;
+	float: right;
+	right: 2%;
+	height: 80px;
+	width: 150px;
+	text-align: right;
+	top: 40px;
+	color: rgb(34,168,170);
+}
+#dollar{
+	font-size: 1.5em;
+}
+#price{
+	font-size: 2em;
+}
+.tag{
+	position: relative;
+	float: right;
+	top: 35px;
+	height: 30px;
+	width: 360px;
+	text-align: right;
+	right: 2%;
+	line-height: 2em;
+	font-size: 0.8em;
+}
+#tag{
+	width: 100px;
+	border:2px solid;
+	border-radius: 10px;
+	border-color: rgb(224,224,224);
+	color: rgb(200,200,200);
+}
