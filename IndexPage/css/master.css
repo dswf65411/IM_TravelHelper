@@ -1,0 +1,199 @@
+body {
+    background-image: url("../images/demo.jpg");
+    background-position: 0px -50px;
+    background-repeat: no-repeat;
+    background-size: 100% 670px;
+}
+
+.demo {
+    position: relative;
+    height: 575px;
+    width: 100%;
+}
+
+.nav {
+    position: relative;
+	width: 100%;
+	height: 60px;
+    margin-top: 10px;
+}
+
+#logo {
+    position: relative;
+    width: 1.25em;
+    float: left;
+    left: 1%;
+}
+
+.center {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    height: 200px;
+    width: 50%;
+}
+
+.logo-name {
+    position: relative;
+    float: left;
+    left: 2%;
+    font-size: 1.25em;
+    color: white;
+}
+
+.nav-item {
+    position: relative;
+    float: right;
+    right: 1%;
+    margin-left: 1%;
+    font-size: 1.25em;
+    color: white;
+}
+
+.slogan {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#big-slogan {
+    position: relative;
+    font-size: 2.25em;
+}
+
+#small-slogan {
+    position: relative;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.search {
+    position: relative;
+    top: 100px;
+    left: 10%;
+    height: 40px;
+    width: 80%;
+    background: white;
+    border-radius: 4px;
+}
+
+.search-text {
+    position: relative;
+    border-radius: 4px;
+    float: right;
+    height: 40px;
+    width: 20%;
+    background: #00AA88;
+    font-size: 1.5em;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.tour {
+    position: relative;
+    width: 100%;
+    height: 1250px;
+    background: white;
+}
+
+.region {
+    position: relative;
+    height: 500px;
+    background-color: #DDDDDD;
+}
+
+.title {
+    position: relative;
+    top: 30px;
+    text-align: center;
+    font-size: 2.25em;
+}
+
+.tour-row {
+    position: relative;
+    margin-left: 5%;
+    width: 90%;
+    top: 50px;
+    height: 300px;
+}
+
+.each-region {
+    position: relative;
+    float: left;
+    width: 33.33333%;
+    height: 300px;
+}
+
+.region-img {
+    position: relative;
+    border-radius: 10px;
+    left: 5%;
+    top: 25px;
+    width: 90%;
+    height: auto;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.region-img:hover {
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 270px;
+    height: 270px;
+    opacity: 1;
+    z-index: 3;
+}
+
+.name-row {
+    position: relative;
+    top: -300px;
+}
+
+.region-name {
+    position: relative;
+    width: 33.33333%;
+    float: left;
+    height: 50px;
+    font-size: 3em;
+    z-index: 2;
+    color: #666666;
+    line-height: 300px;
+    text-align: center;
+}
+
+.see-more {
+    position: relative;
+    border-radius: 4px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 20%;
+    background: #00AA88;
+    font-size: 1.5em;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.button:hover {
+    background-color: #008866;
+}
+
+.hot-tour {
+    position: relative;
+    background-color: #DDDDDD;
+    height: 750px;
+}
+
+.footer {
+    position: relative;
+    background-color: #444444;
+    width: 100%;
+    height: 250px;
+    font-size: 1.5em;
+    line-height: 250px;
+    text-align: center;
+}
