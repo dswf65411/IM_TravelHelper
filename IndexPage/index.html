@@ -5,7 +5,24 @@
         <link rel="stylesheet" href="/css/reset.css" charset="utf-8">
         <link rel="stylesheet" href="css/normalize.css" type="text/css" charset="utf-8">
         <link rel="stylesheet" href="css/master.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="css/signin.css" type="text/css">
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.js"></script>
         <title>旅人幫</title>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                /*
+                 *  Simple image gallery. Uses default settings
+                 */
+
+                $('.fancybox').fancybox({
+                    padding : 0,
+                    width : 1000
+                });
+
+
+            });
+        </script>
     </head>
     <body>
         <div class="demo">
@@ -14,12 +31,16 @@
                 <div class="logo-name">
                     旅人幫
                 </div>
-                <div class="nav-item">
-                    登入
-                </div>
-                <div class="nav-item">
-                    註冊
-                </div>
+                <a class="fancybox" data-fancybox-type="iframe" href="login.html">
+                    <div class="nav-item">
+                        登入
+                    </div>
+                </a>
+                <a class="fancybox" data-fancybox-type="iframe" href="signin.html">
+                    <div class="nav-item">
+                        註冊
+                    </div>
+                </a>
             </div>
             <div class="center">
                 <div id="big-slogan" class="slogan">
@@ -97,5 +118,12 @@
         <div class="footer">
             this is footer,but it doesn't have anything to show now!
         </div>
+
+            <!-- Add jQuery library -->
+        <script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="source/jquery.fancybox.js"></script>
+        <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css" media="screen" />
+
     </body>
 </html>
