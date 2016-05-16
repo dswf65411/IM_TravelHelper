@@ -178,14 +178,29 @@ h1{
     text-align: center;
 }
 
-#tourContent{
+.content-btn:hover{
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn-selected{
     background: #444444;
     color: #ffffff;
 }
 
-.content-btn:hover{
-    transition: 0.25s;
-    cursor: pointer;
+.btn-unselected{
+    background: #ffffff;
+    color: #000000;
+}
+
+.btn-hover{
+    background: #444444;
+    color: #ffffff;
+}
+
+.btn-unhover{
+    background: #ffffff;
+    color: #000000;
 }
 
 .tour-site {

@@ -10,36 +10,46 @@
 <script>
     var id;
     $(document).ready(function(){
-        $("div.content-btn").hover(
-            function(){
-                $(this).css("background", "#444444");
-                $(this).css("color", "#ffffff");
-            }
-        );
         $("div.content-btn").click(function(){
             id = this.id;
-            if (id === "commentContent")
+            $(this).addClass("btn-selected");
+            $(this).removeClass("btn-unselected");
+            if (id === "commentContent"){
                 btnCommentClick();
+                $("#tourContent").addClass("btn-unselected");
+                $("#tourContent").removeClass("btn-selected");
+            }
             else {
                 btnTourClick();
+                $("#commentContent").addClass("btn-unselected");
+                $("#commentContent").removeClass("btn-selected");
             }
         });
+
+        $("div.content-btn").hover(
+            function(){
+                id = this.id;
+                $(this).addClass("btn-hover");
+                $(this).removeClass("btn-unhover");
+                if (id === "commentContent"){
+                    $("#tourContent").removeClass("btn-hover");
+                }
+                else {
+                    $("#commentContent").removeClass("btn-hover");
+                }
+            },
+            function(){
+                $(this).removeClass("btn-hover");
+            }
+        );
     });
     function btnCommentClick(){
         $("div.tour-site").css("display", "none");
         $("div.comment").css("display", "block");
-        $("#tourContent").css("background", "#ffffff");
-        $("#tourContent").css("color", "#000000");
-        $("#commentContent").css("color", "#ffffff");
-        $("#commentContent").css("background", "#444444");
     }
     function btnTourClick(){
         $("div.tour-site").css("display", "block");
         $("div.comment").css("display", "none");
-        $("#commentContent").css("background", "#ffffff");
-        $("#commentContent").css("color", "#000000");
-        $("#tourContent").css("color", "#ffffff");
-        $("#tourContent").css("background", "#444444");
     }
 </script>
 <body>
@@ -87,8 +97,8 @@
             </div>
             <div class="lower-container">
                 <div class="tour-content">
-                    <div class="content-btn" onmouseout="" id="tourContent">行程內容</div>
-                    <div class="content-btn" onmouseout="" id="commentContent">評論</div>
+                    <div class="content-btn btn-selected" id="tourContent">行程內容</div>
+                    <div class="content-btn" id="commentContent">評論</div>
                     <div class="tour-site">
                         <div class="site-left">
                             <div class="site-name">
