@@ -124,9 +124,13 @@ h1{
     margin-left: 15px;
 }
 
-.guide-star img{
+.guide-star {
     margin-top: 10px;
-    width: 150px;
+}
+
+.guide-star img{
+    margin-top: 0px;
+    width: 100px;
 }
 
 .lower-container {
@@ -138,6 +142,7 @@ h1{
     width: 95%;
     padding: 20px;
     padding-bottom: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
