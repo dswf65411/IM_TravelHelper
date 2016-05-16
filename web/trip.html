@@ -4,8 +4,44 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
     <title>旅人幫</title>
 </head>
+<script>
+    var id;
+    $(document).ready(function(){
+        $("div.content-btn").hover(
+            function(){
+                $(this).css("background", "#444444");
+                $(this).css("color", "#ffffff");
+            }
+        );
+        $("div.content-btn").click(function(){
+            id = this.id;
+            if (id === "commentContent")
+                btnCommentClick();
+            else {
+                btnTourClick();
+            }
+        });
+    });
+    function btnCommentClick(){
+        $("div.tour-site").css("display", "none");
+        $("div.comment").css("display", "block");
+        $("#tourContent").css("background", "#ffffff");
+        $("#tourContent").css("color", "#000000");
+        $("#commentContent").css("color", "#ffffff");
+        $("#commentContent").css("background", "#444444");
+    }
+    function btnTourClick(){
+        $("div.tour-site").css("display", "block");
+        $("div.comment").css("display", "none");
+        $("#commentContent").css("background", "#ffffff");
+        $("#commentContent").css("color", "#000000");
+        $("#tourContent").css("color", "#ffffff");
+        $("#tourContent").css("background", "#444444");
+    }
+</script>
 <body>
     <div class="nav">
         <img class="logo" src="images/logo.png">
@@ -51,7 +87,8 @@
             </div>
             <div class="lower-container">
                 <div class="tour-content">
-                    <h1>行程內容</h1>
+                    <div class="content-btn" onmouseout="" id="tourContent">行程內容</div>
+                    <div class="content-btn" onmouseout="" id="commentContent">評論</div>
                     <div class="tour-site">
                         <div class="site-left">
                             <div class="site-name">
@@ -123,7 +160,6 @@
                 </div>
             </div>
             <div class="comment double-border">
-                <h1>評論</h1>
                 <div class="comment-box">
                     <div class="guest">
                         <div class="guest-info">

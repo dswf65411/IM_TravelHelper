@@ -22,6 +22,7 @@ h1{
     background: rgba(200, 200, 200, 0.95);
     width: 100%;
     height: 60px;
+    z-index: 1;
 }
 
 .option{
@@ -167,16 +168,30 @@ h1{
     margin-left: 10px;
 }
 
-.tour-content h1{
+.content-btn{
+    width: 120px;
     font-size: 25px;
-    margin: 20px;
+    padding: 20px;
     margin-top: 10px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+
+#tourContent{
+    background: #444444;
+    color: #ffffff;
+}
+
+.content-btn:hover{
+    transition: 0.25s;
+    cursor: pointer;
 }
 
 .tour-site {
-    margin-top: 30px;
     padding: 25px;
     background: rgba(230, 230, 230, 0.5);
+    margin-bottom: 20px;
 }
 
 .site-left {
@@ -223,15 +238,16 @@ h1{
 }
 
 .comment{
-    margin-top: 20px;
     padding: 20px;
     font-size: 25px;
+    display: none;
 }
 
 .comment-box{
     width: 100%;
     padding: 20px;
     padding-top: 35px;
+
 }
 
 .guest{
@@ -303,6 +319,7 @@ h1{
 .calendar-btn:hover{
     transition: 0.25s;
     background: rgba(200, 245, 245, 0.2);
+    cursor: pointer;
 }
 
 .submit-btn{
@@ -322,6 +339,7 @@ h1{
 .submit-btn:hover{
     transition: 0.25s;
     background: #1CCACA;
+    cursor: pointer;
 }
 
 .add-like{
@@ -346,4 +364,5 @@ h1{
 .add-btn:hover{
     transition: 0.25s;
     background: #888888;
+    cursor: pointer;
 }
