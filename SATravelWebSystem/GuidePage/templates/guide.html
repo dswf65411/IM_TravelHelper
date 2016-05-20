@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/reset.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>郭大槌</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="{% url "home" %}"><img class="logo" src="{% static "images/logo.png" %}"></a>
+        <li class="logo-name">旅人幫</li>
+        <li class="option">註冊</li>
+        <li class="option">登入</li>
+    </div>
+    <div class="cover"></div>
+    <div class="container">
+        <div class="left-container">
+            <div class="upper-container">
+                <div class="upper-left">
+                    <div class="guide-info">
+                        <div class="guide-left">
+                            <img class=" double-border" src="{% static "images/profile.jpg" %}">
+                        </div>
+                        <div class="guide-right">
+                            <div class="guide-name">
+                                <h1>郭大槌</h1>
+                                <img src="{% static "images/icon-sex.png" %}">
+                            </div>
+                            <div class="guide-star">
+                                親和力：　　<img src="{% static "images/starbox.png" %}"><br>
+                                滿意度：　　<img src="{% static "images/starbox.png" %}"><br>
+                                第一印象：　<img src="{% static "images/starbox.png" %}"><br>
+                                口條：　　　<img src="{% static "images/starbox.png" %}"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <div class="d-title">關於我</div>
+                        <div class="d-content">
+                            台大資管系三年級，人稱大鐵鎚，未來立志做裝潢家，用臉敲出自己的一片天。除了用臉敲東西之外，旅遊也是我的興趣！我經常雲遊四海，結識了許多有趣的在地人、背包客或是長得跟我一樣醜的人。參加過我的行程的人都會說：「哇！我真的沒有看過像你這麼醜的人欸！」很多名言也是因為我的鐵鎚臉而生：「一山還有一山高，醜卻不若毓棠醜。」、「勸君更盡一杯酒，因為毓棠長太醜。」、「安居不用架高堂，美也郁棠、醜也毓棠。」總之，我是臺大的風雲人物，快來找我玩吧！
+                        </div>
+                    </div>
+                    <!--
+                    <div class="tour-star">
+                        <img src="images/starbox.png">
+                        <h1>行程評價</h1>
+                    </div>
+                    -->
+                </div>
+            </div>
+            <div class="lower-container">
+                <div class="tour-content">
+                    <h1>行程內容</h1>
+                    <div class="tour-site">
+                        <div class="site-left">
+                            <div class="site-name">
+                                <img class="double-border" src="{% static "images/site1.jpg" %}">
+                            </div>
+                        </div>
+                        <div class="site-right">
+                            <div class="tag">
+                                <a href="">#下午茶</a>
+                                <a href="">#美食</a>
+                            </div>
+                            <div class="t-content">
+                            <p>小木屋鬆餅</p>
+                                台大校園的小木屋鬆餅不論是平日還是假日都很多人排隊，最主要
+                                是便宜又好吃...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-site">
+                        <div class="site-left">
+                            <div class="site-name">
+                                <img class="double-border" src="{% static "images/site3.jpg" %}">
+                            </div>
+                        </div>
+                        <div class="site-right">
+                            <div class="tag">
+                                <a href="">#約會</a>
+                                <a href="">#美食</a>
+                                <a href="">#美眉</a>
+                                <a href="">#休息</a>
+                            </div>
+                            <div class="t-content">
+                            <p>大一女舍</p>
+                                美食廣場，<br>
+                                女生宿舍。<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-site">
+                        <div class="site-left">
+                            <div class="site-name">
+                                <img class="double-border" src="{% static "images/site2.jpg" %}">
+                            </div>
+                        </div>
+                        <div class="site-right">
+                            <div class="tag">
+                                <a href="">#文藝</a>
+                                <a href="">#建築</a>
+                                <a href="">#休息</a>
+                            </div>
+                            <div class="t-content">
+                            <p>社科院圖書館</p>
+                                本院新大樓由日本知名建築家，2012年普立茲克建築獎
+                                (Pritzker Architecture Prize)得主伊東豐雄(Toyo ITO)建
+                                築師設計，並獲得2013年第35屆臺灣建築佳作獎的榮譽...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment double-border">
+                <h1>別人對此人的評價</h1>
+                <div class="comment-box">
+                    <div class="guest">
+                        <div class="guest-info">
+                            <img src="{% static "images/guest1.jpg" %}">
+                            <p>David</p>
+                        </div>
+                    </div>
+                    <div class="guest-comment">
+                        行程不錯，但人真的長得不太好看。
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="comment-box">
+                    <div class="guest">
+                        <div class="guest-info">
+                            <img src="{% static "images/guest2.jpg" %}">
+                            <p>瑤瑤</p>
+                        </div>
+                    </div>
+                    <div class="guest-comment">
+                        好醜啊！<br>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="comment-box">
+                    <div class="guest">
+                        <div class="guest-info">
+                            <img src="{% static "images/guest3.jpg" %}">
+                            <p>翰伸</p>
+                        </div>
+                    </div>
+                    <div class="guest-comment">
+                        怎麼會這麼醜？
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

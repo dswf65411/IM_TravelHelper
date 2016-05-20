@@ -94,23 +94,14 @@ body {
 .tour {
     position: relative;
     width: 100%;
-<<<<<<< HEAD
-    height: 1250px;
-=======
     height: 1400px;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
     background: white;
 }
 
 .region {
     position: relative;
-<<<<<<< HEAD
-    height: 500px;
-    background-color: #DDDDDD;
-=======
     height: 550px;
     background-color: white;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
 }
 
 .title {
@@ -132,55 +123,32 @@ body {
     position: relative;
     float: left;
     width: 33.33333%;
-<<<<<<< HEAD
-    height: 300px;
-=======
     height: 350px;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
 }
 
 .region-img {
     position: relative;
     border-radius: 10px;
-<<<<<<< HEAD
-    left: 5%;
-    top: 25px;
-    width: 90%;
-    height: auto;
-    opacity: 0.4;
-=======
     left: 10%;
     top: 25px;
     width: 80%;
     height: auto;
     opacity: 0.5;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
     z-index: 1;
 }
 
 .region-img:hover {
-<<<<<<< HEAD
-    margin-left: -10px;
-    margin-top: -10px;
-    width: 270px;
-    height: 270px;
-=======
     margin-left: -2.5%;
     margin-top: -2.5%;
     width: 85%;
     height: auto;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
     opacity: 1;
     z-index: 3;
 }
 
 .name-row {
     position: relative;
-<<<<<<< HEAD
-    top: -300px;
-=======
     top: -350px;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
 }
 
 .region-name {
@@ -198,11 +166,7 @@ body {
 .see-more {
     position: relative;
     border-radius: 4px;
-<<<<<<< HEAD
-    margin-top: 100px;
-=======
     margin-top: 110px;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
     margin-left: auto;
     margin-right: auto;
     height: 40px;
@@ -221,11 +185,7 @@ body {
 .hot-tour {
     position: relative;
     background-color: #DDDDDD;
-<<<<<<< HEAD
-    height: 750px;
-=======
     height: 850px;
->>>>>>> 176e4a030064cb99e56508b6877a24122f7c4f86
 }
 
 .footer {

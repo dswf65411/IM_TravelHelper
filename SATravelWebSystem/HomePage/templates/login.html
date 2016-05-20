@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>signin</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/normalize.css" %}" charset="utf-8">
+	<link rel="stylesheet" href="{% static "css/signin.css" %}" type="text/css">
+</head>
+<body>
+	<div class="centerBox">
+		<div class="typeData" style="margin-left: 25%;">
+			信箱：<input><br>
+			密碼：<input><br>
+		</div>
+	</div>
+	<a href="{% url "finally" %}">
+		<div class="signBtn">
+			登入
+		</div>
+	</a>
+	<div style="color: rgba(0, 0, 0, 0)">temp</div>
+</body>
+</html>
