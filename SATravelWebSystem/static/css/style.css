@@ -1,22 +1,18 @@
-body{
+body {
     font-family: "Microsoft JhengHei", sans-serif;
 }
-
-h1{
+h1 {
     font-weight: bold;
 }
-
-.double-border{
+.double-border {
     border: 1px solid #cccccc;
     padding: 2px;
     background: #ffffff;
 }
-
-.divider{
+.divider {
     height: 1px;
     background: #cccccc;
 }
-
 .nav {
     position: fixed;
     background: rgba(200, 200, 200, 0.95);
@@ -24,8 +20,7 @@ h1{
     height: 60px;
     z-index: 1;
 }
-
-.option{
+.option {
     float: right;
     width: 90px;
     height: 100%;
@@ -34,12 +29,10 @@ h1{
     line-height: 58px;
     font-size: 17px;
 }
-
-.option:hover{
+.option:hover {
     background: rgb(170, 170, 170);
     transition: 0.25s;
 }
-
 .logo {
     float: left;
     width: 50px;
@@ -47,8 +40,7 @@ h1{
     margin-top: 5px;
     margin-right: 5px;
 }
-
-.logo-name{
+.logo-name {
     float: left;
     width: 90px;
     height: 100%;
@@ -57,7 +49,6 @@ h1{
     line-height: 58px;
     font-size: 20px;
 }
-
 .cover {
     background-image: url('../images/cover.jpg');
     background-size: cover;
@@ -65,110 +56,90 @@ h1{
     width: 100%;
     height: 400px;
 }
-
-.container{
+.container {
     padding-left: 125px;
     padding-right: 125px;
 }
-
-.left-container{
+.left-container {
     width: 70%;
     float: left;
 }
-
-.right-container{
+.right-container {
     float: right;
     width: 28.7%;
 }
-
-.upper-left{
-}
-
-.guide-info{
+.upper-left {}
+.guide-info {
     width: 100%;
     height: 200px;
     padding-top: 40px;
 }
-
-.guide-left{
+.guide-left {
     height: 100%;
     border-radius: 50%;
     float: left;
 }
-
-.guide-left img{
+.guide-left img {
     border-radius: 50%;
     height: 150px;
 }
-
-.guide-right{
+.guide-right {
     margin-top: 50px;
     height: 150px;
     float: left;
     margin-left: 40px;
 }
-
-.guide-name{
+.guide-name {
     width: inherit;
     height: 35px;
 }
-
-.guide-name h1{
+.guide-name h1 {
     float: left;
     font-size: 32px;
 }
-
-.guide-name img{
+.guide-name img {
     width: 32px;
     height: 32px;
     float: left;
     margin-left: 15px;
 }
-
-.guide-star img{
+.guide-star img {
     margin-top: 10px;
     width: 150px;
 }
-
 .description {
     border: 1px solid #dddddd;
     background: rgba(230, 230, 230, 0.5);
     width: 100%;
 }
-
-.d-title{
+.d-title {
     margin: 20px;
     font-size: 25px;
     font-weight: bold;
 }
-
-.d-content{
+.d-content {
     margin: 20px;
     line-height: 22px;
     text-align: justify;
 }
-
-.tour-star{
+.tour-star {
     height: 50px;
     width: 100%;
     line-height: 50px;
     text-align: center;
 }
-
-.tour-star h1{
+.tour-star h1 {
     font-size: 18px;
     float: right;
     margin-top: 2px;
 }
-
-.tour-star img{
+.tour-star img {
     margin-top: 10px;
     width: 120px;
     float: right;
     margin-left: 10px;
 }
-
-.content-btn{
+.content-btn {
     width: 120px;
     font-size: 25px;
     padding: 20px;
@@ -177,58 +148,60 @@ h1{
     display: inline-block;
     text-align: center;
 }
-
-#tourContent{
+.btn-selected {
     background: #444444;
     color: #ffffff;
 }
-
-.content-btn:hover{
+.content-btn:hover {
     transition: 0.25s;
     cursor: pointer;
 }
-
+.btn-unselected {
+    background: #ffffff;
+    color: #000000;
+}
+.btn-hover {
+    background: #444444;
+    color: #ffffff;
+}
+.btn-unhover {
+    background: #ffffff;
+    color: #000000;
+}
 .tour-site {
     padding: 25px;
     background: rgba(230, 230, 230, 0.5);
     margin-bottom: 20px;
 }
-
 .site-left {
     width: 55%;
     height: 100%;
     display: inline-block;
 }
-
-.site-name p{
+.site-name p {
     font-weight: bold;
     font-size: 25px;
     color: #444444;
 }
-
-.site-name img{
+.site-name img {
     width: 97%;
     margin-top: 15px;
 }
-
 .site-right {
     width: 44%;
     height: 100%;
     display: inline-block;
     vertical-align: top;
 }
-
-.tag{
+.tag {
     text-align: right;
     width: 100%;
     height: 30px;
 }
-
-.tag a{
+.tag a {
     color: #689BE9;
 }
-
-.t-content{
+.t-content {
     width: 100%;
     text-align: justify;
     padding-left: 10px;
@@ -236,39 +209,32 @@ h1{
     line-height: 22px;
     color: #222222;
 }
-
-.comment{
+.comment {
     padding: 20px;
     font-size: 25px;
     display: none;
 }
-
-.comment-box{
+.comment-box {
     width: 100%;
     padding: 20px;
     padding-top: 35px;
-
 }
-
-.guest{
+.guest {
     position: relative;
     width: 15%;
     display: inline-block;
 }
-
-.guest-info{
+.guest-info {
     width: 100%;
     text-align: center;
     font-size: 14px;
     line-height: 20px;
 }
-
-.guest-info img{
+.guest-info img {
     border-radius: 50%;
     width: 90px;
 }
-
-.guest-comment{
+.guest-comment {
     position: relative;
     width: 80%;
     display: inline-block;
@@ -278,36 +244,31 @@ h1{
     vertical-align: top;
     margin-left: 20px;
 }
-
-.book-box{
+.book-box {
     width: 100%;
     background: #eeeeee;
     margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 50px;
 }
-
-.box-row{
+.box-row {
     width: 100%;
     padding-top: 20px;
     margin-top: 10px;
 }
-
-.box-upper-left{
+.box-upper-left {
     width: 30%;
     font-size: 18px;
     display: inline-block;
     text-align: center;
 }
-
-.box-upper-right{
+.box-upper-right {
     width: 65%;
     font-size: 18px;
     display: inline-block;
     text-align: center;
 }
-
-.calendar-btn{
+.calendar-btn {
     padding: 8px;
     font-size: 16px;
     text-align: center;
@@ -315,14 +276,12 @@ h1{
     border: 2px solid #cccccc;
     border-radius: 5px;
 }
-
-.calendar-btn:hover{
+.calendar-btn:hover {
     transition: 0.25s;
     background: rgba(200, 245, 245, 0.2);
     cursor: pointer;
 }
-
-.submit-btn{
+.submit-btn {
     position: relative;
     left: 50%;
     width: 250px;
@@ -335,19 +294,17 @@ h1{
     background: #0AA8A8;
     border-radius: 5px;
 }
-
-.submit-btn:hover{
+.submit-btn:hover {
     transition: 0.25s;
     background: #1CCACA;
+    color: black;
     cursor: pointer;
 }
-
-.add-like{
+.add-like {
     margin-top: 20px;
     width: 100%
 }
-
-.add-btn{
+.add-btn {
     position: relative;
     left: 50%;
     width: 270px;
@@ -360,8 +317,7 @@ h1{
     background: #444444;
     border-radius: 5px;
 }
-
-.add-btn:hover{
+.add-btn:hover {
     transition: 0.25s;
     background: #888888;
     cursor: pointer;

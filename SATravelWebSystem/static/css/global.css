@@ -1,0 +1,19 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+a {
+    color: white;
+}
+
+.button {
+    text-align: center;
+    color: white;
+    background: #0AA8A8;
+}
+
+.button:hover {
+    transition: 0.30s;
+    color: black;
+    background-color: #1CCACA;
+}

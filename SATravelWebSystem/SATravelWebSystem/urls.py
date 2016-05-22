@@ -23,11 +23,11 @@ from GuidePage import views as Guide_Views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', Home_Views.home, name='home'),
-    url(r'^signin/', Home_Views.signin, name='signin'),
-    url(r'^login/', Home_Views.login, name='login'),
-    url(r'^finish/', Home_Views.finish, name='finish'),
-    url(r'^finally/', Home_Views.login_finish, name='finally'),
-    url(r'^list/', List_Views.list, name='list'),
-    url(r'^trip/', Trip_Views.trip, name='trip'),
-    url(r'^guide/', Guide_Views.guide, name='guide'),
+    url(r'^signin', Home_Views.signin, name='signin'),
+    url(r'^login', Home_Views.login, name='login'),
+    url(r'^finish', Home_Views.finish, name='finish'),
+    url(r'^finally', Home_Views.login_finish, name='finally'),
+    url(r'^list', List_Views.list, name='list'),
+    url(r'^trip', Trip_Views.trip, name='trip'),
+    url(r'^guide', Guide_Views.guide, name='guide'),
 ]

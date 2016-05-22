@@ -3,7 +3,13 @@ from django.shortcuts import render
 # Create your views here.
 
 def list(request):
-    post = range(0, 4)
+    name = '臺大'
+    region = '台北'
+    if 'region' in request.GET and request.GET['region'] != '':
+        region = request.GET['region']
+    if 'school' in request.GET and request.GET['school'] != '':
+        name = request.GET['school']
     return  render(request, 'list.html', {
-        'post': post,
+        'name': name,
+        'region': region
     })

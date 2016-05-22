@@ -1,0 +1,32 @@
+.nav {
+    opacity: 0.9;
+    position: fixed;
+	width: 100%;
+	height: 50px;
+    line-height: 50px;
+    font-size: 1.5em;
+    background-color: #0AA8A8;
+    z-index: 100;
+}
+
+.nav-item {
+    position: relative;
+    float: right;
+    width: 75px;
+}
+
+#logo {
+    position: relative;
+    top: 15%;
+    height: 70%;
+    width: auto;
+    float: left;
+    left: 1%;
+}
+
+.logo-name {
+    position: relative;
+    float: left;
+    left: 2%;
+    color: white;
+}

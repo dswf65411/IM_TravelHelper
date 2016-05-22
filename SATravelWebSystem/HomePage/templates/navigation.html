@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="{% static "css/navigation.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/global.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/fancybox/jquery.fancybox.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/signin.css" %}" type="text/css">
+        <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/modernizr.custom.js" %}"></script>
+        <!-- Add jQuery library -->
+        <script type="text/javascript" src="{% static "js/jquery-1.10.1.min.js" %}"></script>
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="{% static "js/jquery.fancybox.js" %}"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                /*
+                 *  Simple image gallery. Uses default settings
+                 */
+                $('.fancybox').fancybox({
+                    padding : 0,
+                    width : 1000
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="{% url "home" %}">
+                <img id="logo" src="{% static "images/people.png" %}" />
+                <div class="logo-name button">
+                    旅人幫
+                </div>
+            </a>
+            <a href="{% url "login" %}" class="fancybox" data-fancybox-type="iframe">
+                <div class="nav-item button">
+                    登入
+                </div>
+            </a>
+            <a href="{% url "signin" %}" class="fancybox" data-fancybox-type="iframe">
+                <div class="nav-item button">
+                    註冊
+                </div>
+            </a>
+        </div>
+    </body>
+</html>

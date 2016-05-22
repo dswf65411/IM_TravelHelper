@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>signin</title>
 	{% load staticfiles %}
-	<link rel="stylesheet" href="{% static "css/normalize.css" %}" charset="utf-8">
 	<link rel="stylesheet" href="{% static "css/signin.css" %}" type="text/css">
+	<link rel="stylesheet" href="{% static "css/global.css" %}" type="text/css">
 </head>
 <body>
 	<div class="centerBox">
@@ -26,11 +26,11 @@
 			<div style="font-size: 12px; color: grey; margin-left: 50px;">若要註冊為導遊，需要輸入ntu-mail</div>
 		</div>
 	</div>
-	<div class="signBtn">
-		<a href="{% url "finish" %}" style="color: white">
-		註冊
-		</a>
-	</div>
+	<a href="{% url "finish" %}">
+		<div class="signBtn button">
+			註冊
+		</div>
+	</a>
 	<div style="color: rgba(0, 0, 0, 0)">temp</div>
 </body>
 </html>

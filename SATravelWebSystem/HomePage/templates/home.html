@@ -3,45 +3,17 @@
     <head>
         <meta charset="utf-8">
         {% load staticfiles %}
-        <link rel="stylesheet" href="{% static "css/reset.css" %}" charset="utf-8">
-        <link rel="stylesheet" href="{% static "css/normalize.css" %}" type="text/css" charset="utf-8">
-        <link rel="stylesheet" href="{% static "css/master.css" %}" type="text/css" charset="utf-8">
-        <link rel="stylesheet" href="{% static "css/signin.css" %}" type="text/css" charset="utf-8">
+        {% load nbsp %}
+        <link rel="stylesheet" href="{% static "css/reset.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/normalize.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/master.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/global.css" %}" type="text/css">
+        <!-- <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" charset="utf-8"> -->
         <title>旅人幫</title>
-        <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/modernizr.custom.js" %}"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                /*
-                 *  Simple image gallery. Uses default settings
-                 */
-                $('.fancybox').fancybox({
-                    padding : 0,
-                    width : 1000
-                });
-            });
-        </script>
     </head>
     <body>
         <div class="demo">
-            <div class="nav">
-                <a href="{% url "home" %}">
-                    <img id="logo" src="{% static "images/people-6.png" %}" />
-                    <div class="logo-name">
-                        旅人幫
-                    </div>
-                </a>
-                <div class="nav-item">
-                    <a href="{% url "login" %}" class="fancybox" data-fancybox-type="iframe">
-                        登入
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="{% url "signin" %}" class="fancybox" data-fancybox-type="iframe">
-                        註冊
-                    </a>
-                </div>
-            </div>
+            {% include "navigation.html" %}
             <div class="center">
                 <div id="big-slogan" class="slogan">
                     在這裡找到你喜愛的旅遊
@@ -62,68 +34,42 @@
                     找尋喜歡的行程與導遊
                 </div>
                 <div class="tour-row">
+                    {% for top_region in top_regions %}
                     <div class="each-region">
-                        <a href="{% url "list" %}">
-                            <img class="region-img" src="{% static "images/taiwan_university.png" %}" />
+                        <a href="{% url "list" %}?region={{top_region.region}}&school={{top_region.school}}">
+                            <img class="region-img" src="{{top_region.image}}" />
+                            <div class="region-name">
+                                {{top_region.name|nbsp}}
+                            </div>
                         </a>
                     </div>
-                    <div class="each-region">
-                        <img class="region-img" src="{% static "images/chin-hua.png" %}" />
-                    </div>
-                    <div class="each-region">
-                        <img class="region-img" src="{% static "images/mrt.png" %}" />
-                    </div>
-                    <div class="name-row">
-                        <div class="region-name">
-                            台&nbsp&nbsp大
-                        </div>
-                        <div class="region-name">
-                            清&nbsp&nbsp大
-                        </div>
-                        <div class="region-name">
-                            交&nbsp&nbsp大
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-                <div class="see-more button">
-                    查看全部行程
-                </div>
+                <a href="{% url "list" %}?region=all">
+                    <div class="see-more button">
+                        查看全部行程
+                    </div>
+                </a>
             </div>
             <div class="hot-tour">
                 <div class="title">
                     熱門行程
                 </div>
                 <div class="tour-row">
-                    <div class="each-region">
-                        <img class="region-img" src="{% static "images/ranbow.png" %}" />
-                    </div>
-                    <div class="each-region">
-                        <img class="region-img" src="{% static "images/paper.png" %}"/>
-                    </div>
-                    <div class="each-region">
-                        <img class="region-img" src="{% static "images/sasasa.png" %}"/>
-                    </div>
-                </div>
+                {% for image in images %}
+                {% if forloop.counter0 == 3 %}
                 <div class="tour-row">
+                </div>
+                {% endif %}
                     <div class="each-region">
-                        <img class="region-img" src="{% static "images/beauty.png" %}"/>
+                        <img class="region-img" src="{{image}}" />
                     </div>
-                    <div class="each-region">
-                        <img class="region-img" src="{% static "images/water.png" %}"/>
-                    </div>
-                    <div class="each-region">
-                        <img class="region-img" src="{% static "images/sunset.png" %}"/>
-                    </div>
+                {% endfor %}
                 </div>
             </div>
         </div>
         <div class="footer">
             this is footer,but it doesn't have anything to show now!
         </div>
-        <!-- Add jQuery library -->
-        <script type="text/javascript" src="{% static "js/jquery-1.10.1.min.js" %}"></script>
-        <!-- Add fancyBox main JS and CSS files -->
-        <script type="text/javascript" src="{% static "js/jquery.fancybox.js" %}"></script>
-        <link rel="stylesheet" type="text/css" href="{% static "css/jquery.fancybox.css" %}" media="screen" />
     </body>
 </html>

@@ -4,16 +4,12 @@
     <meta charset="utf-8">
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static "css/reset.css" %}">
+    <link rel="stylesheet" href="{% static "css/global.css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <title>郭大槌</title>
 </head>
 <body>
-    <div class="nav">
-        <a href="{% url "home" %}"><img class="logo" src="{% static "images/logo.png" %}"></a>
-        <li class="logo-name">旅人幫</li>
-        <li class="option">註冊</li>
-        <li class="option">登入</li>
-    </div>
+    {% include "navigation.html" %}
     <div class="cover"></div>
     <div class="container">
         <div class="left-container">
