@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="{% static "css/navigation.css" %}" type="text/css">
+<link rel="stylesheet" href="{% static "css/global.css" %}" type="text/css">
+<link rel="stylesheet" href="{% static "css/fancybox/jquery.fancybox.css" %}" type="text/css">
+<link rel="stylesheet" href="{% static "css/signin.css" %}" type="text/css">
+<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+<script type="text/javascript" src="{% static "js/modernizr.custom.js" %}"></script>
+<!-- Add jQuery library -->
+<script type="text/javascript" src="{% static "js/jquery-1.10.1.min.js" %}"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="{% static "js/jquery.fancybox.js" %}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         *  Simple image gallery. Uses default settings
+         */
+        $('.fancybox').fancybox({
+            padding : 0,
+            width : 1000
+        });
+    });
+</script>

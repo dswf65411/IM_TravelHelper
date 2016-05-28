@@ -54,15 +54,12 @@ a {
 .signBtn {
 	position: relative;
 	width: 7%;
-	background: #00AA88;
-	color: white;
 	border-radius: 7px;
 	padding: 3px;
 	padding-top: 6px;
 	padding-bottom: 6px;
-	left: 45%;
+	left: 40%;
 	font-size: 18px;
-	text-align: center;
 	margin-top: 5%;
 	margin-bottom: 2%;
 	cursor: pointer;

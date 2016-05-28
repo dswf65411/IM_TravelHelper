@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<div class="nav">
+    <div class="logo items button">
+        <a href="{% url "home" %}">
+            <div class="logo photo">
+                <img id="user-photo" src="{% static "images/people.png" %}" />
+            </div>
+            <div class="logo logo-name">
+                旅人幫
+            </div>
+        </a>
+    </div>
+    {% if request.user.is_authenticated %}
+    <div class="user items button">
+        <div class="nav-item">
+            {{request.user}}
+        </div>
+        <div class="photo">
+            <img id="user-photo" src="{% static "images/people.png" %}" />
+        </div>
+        <ul>
+            <li>設定</li>
+            <a href="{% url "logout" %}">
+                <li>
+                    登出
+                </li>
+            </a>
+        </ul>
+    </div>
+    {% else %}
+    <a href="{% url "login" %}" class="fancybox" data-fancybox-type="iframe">
+        <div class="nav-item button">
+            登入
+        </div>
+    </a>
+    <a href="{% url "register" %}" class="fancybox" data-fancybox-type="iframe">
+        <div class="nav-item button">
+            註冊
+        </div>
+    </a>
+    {% endif %}
+</div>

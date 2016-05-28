@@ -1,44 +1,8 @@
 body {
     background: rgb(224, 224, 224);
-    /*font-size: 1.5em;*/
-    /*font-family: monospace;*/
     color: rgb(79, 79, 79);
 }
-.header {
-    position: fixed;
-    background: rgb(255, 255, 255);
-    height: 70px;
-    width: 100%;
-    z-index: 5;
-}
-a:visited {
-    color: rgb(79, 79, 79);
-}
-.logo-text {
-    display: inline-block;
-    font-size: 1.5em;
-    float: left;
-    line-height: 65px;
-    margin-left: 10px;
-    text-decoration: none;
-    color: rgb(79, 79, 79);
-}
-.logo {
-    height: 70px;
-    margin-left: 20px;
-    float: left;
-}
-#login-register {
-    float: right;
-    margin-right: 40px;
-    font-size: 1.5em;
-    line-height: 65px;
-}
-.login {
-    display: inline-block;
-    margin-right: 10px;
-    color: rgb(34, 168, 170);
-}
+
 .select {
     float: left;
     position: relative;
@@ -89,10 +53,6 @@ a:visited {
 }
 .category:hover ul {
     display: block;
-}
-
-.category ul li {
-    /*border: 1px solid black;*/
 }
 
 .category ul li:hover {

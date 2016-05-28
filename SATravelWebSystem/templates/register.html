@@ -8,17 +8,17 @@
 	<link rel="stylesheet" href="{% static "css/global.css" %}" type="text/css">
 </head>
 <body>
-	<div class="centerBox">
-		<div class="typeData" style="margin-left: 25%;">
-			信箱：<input><br>
-			密碼：<input><br>
+	<form action="" method="POST">
+		{% csrf_token %}
+		<div class="centerBox">
+			<div class="uploadImg"><p>上傳照片</p></div>
+			<table class="typeData">
+				{{ form.as_table }}
+			</table>
 		</div>
-	</div>
-	<a href="{% url "finally" %}">
-		<div class="signBtn button">
-			登入
+		<div class="centerBox">
+			<input type="submit" class="signBtn button" value="註冊">
 		</div>
-	</a>
-	<div style="color: rgba(0, 0, 0, 0)">temp</div>
+	</form>
 </body>
 </html>

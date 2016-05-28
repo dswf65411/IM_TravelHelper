@@ -17,3 +17,87 @@ a {
     color: black;
     background-color: #1CCACA;
 }
+
+.form {
+    font-size: 1em;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.form-error {
+    color: #0AA8A8;
+}
+
+.errorlist {
+    color: red;
+}
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Make `a` like a button */
+[role="button"] {
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    white-space: pre;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+
+/* Demo */
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background-color: #0AA8A8;
+	color: white;
+    border-radius: 7px;
+	padding: 3px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	left: 40%;
+	font-size: 18px;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	cursor: pointer;
+    width: 7%;
+}

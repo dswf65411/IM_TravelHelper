@@ -4,16 +4,15 @@
         <meta charset="utf-8">
         {% load staticfiles %}
         {% load nbsp %}
-        <link rel="stylesheet" href="{% static "css/reset.css" %}" type="text/css">
-        <link rel="stylesheet" href="{% static "css/normalize.css" %}" type="text/css">
-        <link rel="stylesheet" href="{% static "css/master.css" %}" type="text/css">
-        <link rel="stylesheet" href="{% static "css/global.css" %}" type="text/css">
-        <!-- <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" charset="utf-8"> -->
+        <link rel="stylesheet" href={% static "css/reset.css" %} type="text/css">
+        <link rel="stylesheet" href={% static "css/normalize.css" %} type="text/css">
+        <link rel="stylesheet" href={% static "css/master.css" %} type="text/css">
         <title>旅人幫</title>
+        {% include "navigation_static_file.html" %}
     </head>
     <body>
         <div class="demo">
-            {% include "navigation.html" %}
+            {% include "navigation_bar.html" %}
             <div class="center">
                 <div id="big-slogan" class="slogan">
                     在這裡找到你喜愛的旅遊

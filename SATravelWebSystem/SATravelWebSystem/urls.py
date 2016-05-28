@@ -19,15 +19,17 @@ from HomePage import views as Home_Views
 from ListPage import views as List_Views
 from TripPage import views as Trip_Views
 from GuidePage import views as Guide_Views
+from .views import login, logout, register, finish
+from django.views.generic import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', Home_Views.home, name='home'),
-    url(r'^signin', Home_Views.signin, name='signin'),
-    url(r'^login', Home_Views.login, name='login'),
-    url(r'^finish', Home_Views.finish, name='finish'),
-    url(r'^finally', Home_Views.login_finish, name='finally'),
-    url(r'^list', List_Views.list, name='list'),
-    url(r'^trip', Trip_Views.trip, name='trip'),
-    url(r'^guide', Guide_Views.guide, name='guide'),
+    url(r'^accounts/register/', register, name='register'),
+    url(r'^accounts/login/', login, name='login'),
+    url(r'^finish/', finish, name='finish'),
+    url(r'^accounts/logout/', logout, name='logout'),
+    url(r'^list/', List_Views.list, name='list'),
+    url(r'^trip/', Trip_Views.trip, name='trip'),
+    url(r'^guide/', Guide_Views.guide, name='guide'),
 ]
