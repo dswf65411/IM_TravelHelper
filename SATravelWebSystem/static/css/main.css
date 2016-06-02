@@ -1,0 +1,307 @@
+body {
+    background: rgb(245, 245, 245);
+    color: rgb(90, 90, 90);
+}
+
+#listPageBackground {
+    width: 64%;
+    left: 6%;
+    padding-bottom: 100px;
+}
+
+.select {
+    float: left;
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 23%;
+    padding-bottom: 30px;
+    top: 100px;
+    left: 4%;
+    font-weight: bold;
+}
+.choose {
+    position: relative;
+    padding-top: 5px;
+    height: 120px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(79, 79, 79, 0.2);
+    border-bottom-width: 1px;
+}
+
+#choose {
+    padding-top: 10px;
+    margin-left: 11%;
+    line-height: 300%;
+}
+
+.category {
+    list-style: none;
+    width: 80%;
+    height: 30%;
+    margin-left: 10%;
+    text-align: center;
+    line-height: 200%;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(224, 224, 224);
+    color: rgb(34, 168, 170);
+    cursor: pointer;
+}
+
+.category:hover {
+    background: rgb(34, 168, 170);
+    color: rgb(255, 255, 255);
+}
+
+.category ul {
+    display: none;
+    background: rgb(224, 224, 224);
+    color: rgb(34, 168, 170);
+    width: 100%;
+    max-height: 275px;
+    overflow: auto;
+    border-radius: 10px;
+    border-color: rgb(224, 224, 224);
+    margin-top: 2%;
+}
+.category:hover ul {
+    display: block;
+}
+
+.category ul .hoverColor:hover {
+    background: rgb(34, 168, 170);
+    color: rgb(255, 255, 255);
+}
+
+#product ul li:hover {
+    background: rgb(34, 168, 170);
+    color: rgb(255, 255, 255);
+}
+
+#area {
+    z-index: 3;
+}
+#school {
+    z-index: 2;
+}
+#product {
+    z-index: 1;
+}
+.tourcategory {
+    list-style: none;
+    float: left;
+    margin-left: 11%;
+    height: 40%;
+    width: 80%;
+    border: 2px solid;
+    line-height: 200%;
+    border-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    cursor: pointer;
+}
+.tourcategory:hover {
+    background: rgba(224, 224, 224, 0.2);
+}
+.tour {
+    float: left;
+    position: relative;
+    width: 750px;
+    height: auto;
+    top: 100px;
+    left: 10%;
+}
+.intro {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    line-height: 150%;
+    height: 70px;
+    font-size: 225%;
+}
+
+.intro h1 {
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+.intro h1 .mainColor {
+    font-size: 1.05em;
+    font-weight: normal;
+}
+
+.rank {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    z-index: 4;
+    margin-bottom: 2%;
+}
+#rank {
+    list-style: none;
+    width: 24%;
+    height: 37px;
+    margin-left: 1%;
+    text-align: center;
+    line-height: 37px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(224, 224, 224);
+    color: rgb(34, 168, 170);
+}
+#rank:hover {
+    background: rgb(34, 168, 170);
+    color: rgb(255, 255, 255);
+}
+#rank ul {
+    display: none;
+    background: rgb(255, 255, 255);
+    color: rgb(34, 168, 170);
+    width: 100%;
+    max-height: 275px;
+    overflow: auto;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(224, 224, 224);
+    z-index: 4;
+}
+#rank:hover ul {
+    display: block;
+}
+#rank ul li:hover {
+    background: rgb(34, 168, 170);
+    color: rgb(255, 255, 255);
+}
+.tourlink {
+    text-decoration: none;
+    color: rgb(79, 79, 79);
+}
+.tourlist {
+    position: relative;
+    top: 5px;
+    width: 100%;
+    height: 265px;
+    background: white;
+    border: 1px solid #dddddd;
+}
+
+.tourp {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+.tourpFrame {
+    width: 320px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tourtitle {
+    position: absolute;
+    top: 10px;
+    left: 350px;
+    height: 25%;
+    width: 50%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.space {
+    position: relative;
+    width: 100%;
+    height: 15px;
+}
+
+.tourplace {
+    position: absolute;
+    left: 390px;
+    height: 20%;
+    width: 30%;
+    line-height: 2.5em;
+    top: 90px;
+}
+
+.tourplacep {
+    position: absolute;
+    left: -50px;
+    height: 85%;
+}
+
+.tourplace .tourplacep {
+    height: 50%;
+    left: -39px;
+    top: 6px;
+}
+
+.tourhour {
+    position: absolute;
+    left: 395px;
+    height: 17%;
+    width: 30%;
+    line-height: 2.7em;
+    top: 140px;
+}
+.price {
+    position: absolute;
+    float: right;
+    right: 10px;
+    height: 20%;
+    width: 25%;
+    text-align: right;
+    bottom: 60px;
+    color: rgb(34, 168, 170);
+}
+#dollar {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-right: 8%;
+}
+#price {
+    font-size: 2.4em;
+    margin-right: 7%;
+}
+
+.starbox {
+    position: absolute;
+    left: 405px;
+    height: 17%;
+    width: 30%;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 2.7em;
+    top: 190px;
+}
+
+.starbox img {
+    position: relative;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-left: -2px;
+    top: 4px;
+}
+
+.starbox .mainColor {
+    margin-left: -35px;
+}
+
+.tag {
+    position: absolute;
+    float: right;
+    bottom: 7px;
+    text-align: right;
+    right: 10px;
+    line-height: 2em;
+    font-size: 0.8em;
+}
+#tag {
+    width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgba(224, 224, 224, 0);
+    color: white;
+    padding: 3px;
+    background: rgba(255, 0, 0, 0.8);
+}

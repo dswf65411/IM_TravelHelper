@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% load staticfiles %}
+        {% load nbsp %}
+        <link rel="stylesheet" href={% static "css/reset.css" %} type="text/css">
+        <link rel="stylesheet" href={% static "css/normalize.css" %} type="text/css">
+        <link rel="stylesheet" href={% static "css/master.css" %} type="text/css">
+        <title>旅人幫</title>
+        {% include "navigation_static_file.html" %}
+    </head>
+    <body>
+        {% include "navigation_bar.html" %}
+        <div class="welcome">
+            <div class="center">
+                <div id="big-slogan">
+                    在這裡找到你喜愛的旅遊
+                </div>
+                <div id="small-slogan">
+                    讓大學生帶你到處遊玩
+                </div>
+                <div class="search">
+                    <div class="button" id="searchBtn">
+                        搜尋
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tour">
+            <div class="region">
+                <div class="title">
+                    找尋喜歡的行程與導遊
+                </div>
+                <div class="tour-row">
+                    {% for top_region in top_regions %}
+                    <a href="{% url "list" %}?region={{top_region.region}}&school={{top_region.school}}">
+                        <div class="each-region">
+                            <div class="region-name">
+                                {{top_region.name|nbsp}}
+                            </div>
+                            <img class="region-img" src="{{top_region.image}}" />
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+                <a href="{% url "list" %}?region=all">
+                    <div class="button" id="see-more">
+                        查看全部行程
+                    </div>
+                </a>
+            </div>
+            <div class="hot-tour">
+                <div class="title">
+                    熱門行程
+                </div>
+                <div class="tour-row">
+                {% for image in images %}
+                {% if forloop.counter0 == 3 %}
+                <div class="tour-row">
+                </div>
+                {% endif %}
+                    <div class="each-region">
+                        <img class="region-img" src="{{image}}" />
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+            <div class="footer">
+                <div class="copyright">
+                    Copyright © 2016 旅人幫旅行社股份有限公司<br>
+                    icons made by Freepik from www.flaticon.com is licensed by CC BY 3.0
+                </div>
+                <div class="tour-row">
+                    <div class="each-region">
+                        <b>認識旅人幫</b><br>
+                        <a>關於我們</a><br>
+                        <a>服務條款與隱私聲明</a><br>
+                        <a>常見問題與幫助</a><br>
+                        <br>
+                    </div>
+                    <div class="each-region">
+                        <b>聯絡我們</b><br>
+                        service@tour.com<br>
+                        TW +886 2 2222 3333<br>
+                        Service hour: 06:30 - 20:00<br>
+                        ( GMT+08 )
+                    </div>
+                    <div class="each-region"><img src="{% static "images/logo.png" %}" /></div>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>

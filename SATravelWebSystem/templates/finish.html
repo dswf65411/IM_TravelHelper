@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>signin</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/signin.css" %}" type="text/css">
+	<link rel="stylesheet" href="{% static "css/global.css" %}" type="text/css">
+</head>
+<body>
+	<div class="centerBox">
+		<div id="finish">
+		恭喜註冊成功，按下按鍵登入系統！
+		</div>
+	</div>
+	<div class="centerBox">
+		<a href="{% url "login" %}"></a>
+		<div class="signBtn button">
+			登入
+		</div>
+	</div>
+</body>
+</html>

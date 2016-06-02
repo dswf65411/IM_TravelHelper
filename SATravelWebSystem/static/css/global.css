@@ -1,0 +1,164 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+a {
+    color: white;
+}
+
+.mainColor {
+    display: inline-block;
+    color: rgba(85, 195, 195, 1);
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+}
+
+.button img {
+    height: 50px;
+}
+
+
+.button:hover {
+    color: white;
+}
+
+/* up ok */
+
+.form {
+    font-size: 1em;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.form-error {
+    color: #0AA8A8;
+}
+
+.errorlist {
+    color: red;
+}
+
+.floatRight {
+    float: right;
+}
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Make `a` like a button */
+[role="button"] {
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    white-space: pre;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+
+/* Demo */
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background-color: #0AA8A8;
+	color: white;
+    border-radius: 7px;
+	padding: 3px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	left: 40%;
+	font-size: 18px;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	cursor: pointer;
+    width: 7%;
+}
+
+
+.footer {
+    position: relative;
+    display: block;
+    bottom: 0;
+    background-color: #222222;
+    color: white;
+    width: 100%;
+    padding-bottom: 180px;
+    font-size: 1em;
+    line-height: 1.5em;
+    height: 200px;
+}
+
+.footer .copyright {
+    position: absolute;
+    left: 10%;
+    top: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: lighter;
+    font-size: 0.8em;
+}
+
+.footer .tour-row {
+    padding-top: 20px;
+    margin-left: 7%;
+}
+
+.footer .tour-row .each-region {
+    font-size: lighter;
+    width: 25%;
+}
+
+.footer .tour-row .each-region img {
+    margin-left: 20%;
+    width: 50%;
+}
+
+.footer .tour-row .each-region b {
+    line-height: 50px;
+}
+
+.footer .tour-row .each-region a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+

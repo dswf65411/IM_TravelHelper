@@ -1,0 +1,8 @@
+
+.button img {
+	height: 50px;
+}
+
+.btnHover:hover {
+	color: black;
+}

@@ -1,0 +1,77 @@
+$main-color: #5ed8d8;
+
+
+.nav {
+    opacity: 0.9;
+    position: fixed;
+	width: 100%;
+	height: 50px;
+    line-height: 50px;
+    font-size: 1.25em;
+    background-color: #5ed8d8;
+    z-index: 100;
+}
+
+.items {
+    position: relative;
+    width: 125px;
+}
+
+.items:hover .nav-item {
+    color: black;
+}
+
+.user {
+    float: right;
+}
+
+.logo {
+    float: left;
+}
+
+.logo-name {
+    width: 75px;
+    text-align: center;
+}
+
+.logo:hover .logo-name {
+    color: black;
+}
+
+.nav-item {
+    position: relative;
+    float: right;
+    width: 75px;
+    text-align: center;
+    color: white;
+    height: 50px;
+}
+
+.photo {
+    height: 50px;
+    width: 50px;
+}
+
+#user-photo {
+    position: relative;
+    top: 15%;
+    height: 70%;
+    width: auto;
+}
+
+.items:hover ul {
+    transition: 0.75s;
+    display: block;
+}
+
+.items ul {
+    display: none;
+    background-color: #0AA8A8;
+    color: white;
+}
+
+.items ul li:hover {
+    transition: 0.30s;
+    background-color: #1CCACA;
+    color: black;
+}
