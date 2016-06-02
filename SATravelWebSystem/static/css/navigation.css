@@ -41,7 +41,11 @@
 
 #userBtn {
     width: 130px;
-    height: 70px;
+    height: 60px;
+}
+
+#userBtn:hover {
+    background-color: rgba(85, 195, 195, 0.9);
 }
 
 #userBtn img {
@@ -57,8 +61,8 @@
 
 #userBtn ul {
     position: absolute;
-    top: 70px;
-    background-color: rgba(94, 216, 216, 0.9);
+    top: 60px;
+    background-color: rgba(85, 195, 195, 0.9);
     width: 130px;
     display: none;
     color: white;

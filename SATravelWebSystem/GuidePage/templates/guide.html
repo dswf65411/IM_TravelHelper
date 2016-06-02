@@ -47,71 +47,80 @@
                     -->
                 </div>
             </div>
-            <div class="lower-container">
+        </div>
+    </div>
+            <div class="guide-container">
                 <div class="tour-content">
                     <h1>行程內容</h1>
-                    <div class="tour-site">
-                        <div class="site-left">
-                            <div class="site-name">
-                                <img class="double-border" src="{% static "images/site1.jpg" %}">
+                    <a href="{% url "trip" %}">
+                        <div class="guide-site">
+                        
+                            <div class="site-left">
+                                <div class="site-name">
+                                    <img class="double-border" src="{% static "images/site1.jpg" %}">
+                                </div>
+                            </div>
+                        
+                            <div class="site-right">
+                                <div class="tag">
+                                    觀光行程、一日遊、美食購物
+                                </div>
+                                <div class="t-content">
+                                <p>[ 台大真實體驗營 ] 腳踏車繞校園＋小木屋鬆餅＋台大鮮奶</p>
+                                    <br>
+                                    台大校園的小木屋鬆餅不論是平日還是假日都很多人排隊，最主要
+                                    是便宜又好吃...
+                                </div>
+                            </div> 
+                        </div>
+                    </a>
+                    <a href="{% url "trip" %}">
+                        <div class="guide-site">
+                            <div class="site-left">
+                                <div class="site-name">
+                                    <img class="double-border" src="{% static "images/site3.jpg" %}">
+                                </div>
+                            </div>
+                            <div class="site-right">
+                                <div class="tag">
+                                    一日遊
+                                </div>
+                                <div class="t-content">
+                                <p>大一女舍附近小吃旅行</p>
+                                    <br>
+                                    美食廣場，<br>
+                                    女生宿舍。<br>
+                                </div>
                             </div>
                         </div>
-                        <div class="site-right">
-                            <div class="tag">
-                                #下午茶
-                                #美食
+                    </a>
+                    <a href="{% url "trip" %}">
+                        <div class="guide-site">
+                            <div class="site-left">
+                                <div class="site-name">
+                                    <img class="double-border" src="{% static "images/site2.jpg" %}">
+                                </div>
                             </div>
-                            <div class="t-content">
-                            <p>小木屋鬆餅</p>
-                                台大校園的小木屋鬆餅不論是平日還是假日都很多人排隊，最主要
-                                是便宜又好吃...
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-site">
-                        <div class="site-left">
-                            <div class="site-name">
-                                <img class="double-border" src="{% static "images/site3.jpg" %}">
-                            </div>
-                        </div>
-                        <div class="site-right">
-                            <div class="tag">
-                                <a href="">#約會</a>
-                                <a href="">#美食</a>
-                                <a href="">#美眉</a>
-                                <a href="">#休息</a>
-                            </div>
-                            <div class="t-content">
-                            <p>大一女舍</p>
-                                美食廣場，<br>
-                                女生宿舍。<br>
+                            <div class="site-right">
+                                <div class="tag">
+                                    文化藝術
+                                </div>
+                                <div class="t-content">
+                                <p>社科院圖書館知性之旅</p>
+                                    <br>
+                                    本院新大樓由日本知名建築家，2012年普立茲克建築獎
+                                    (Pritzker Architecture Prize)得主伊東豐雄(Toyo ITO)建
+                                    築師設計，並獲得2013年第35屆臺灣建築佳作獎的榮譽...
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tour-site">
-                        <div class="site-left">
-                            <div class="site-name">
-                                <img class="double-border" src="{% static "images/site2.jpg" %}">
-                            </div>
-                        </div>
-                        <div class="site-right">
-                            <div class="tag">
-                                <a href="">#文藝</a>
-                                <a href="">#建築</a>
-                                <a href="">#休息</a>
-                            </div>
-                            <div class="t-content">
-                            <p>社科院圖書館</p>
-                                本院新大樓由日本知名建築家，2012年普立茲克建築獎
-                                (Pritzker Architecture Prize)得主伊東豐雄(Toyo ITO)建
-                                築師設計，並獲得2013年第35屆臺灣建築佳作獎的榮譽...
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <div class="comment double-border">
-                <h1>別人對此人的評價</h1>
+
+
+            <div class="comment guide">
+                <h1>對此人的行程評價</h1>
                 <div class="comment-box">
                     <div class="guest">
                         <div class="guest-info">
@@ -120,7 +129,10 @@
                         </div>
                     </div>
                     <div class="guest-comment">
-                        行程不錯，但人真的長得不太好看。
+                        台大真的好有趣！小木屋鬆餅很好吃
+                    </div>
+                    <div class="commentImg">
+                        <img src="{% static "images/0001.jpg" %}">
                     </div>
                 </div>
                 <div class="divider"></div>
@@ -132,7 +144,10 @@
                         </div>
                     </div>
                     <div class="guest-comment">
-                        好醜啊！<br>
+                        導遊長得不太親切，但人滿和善的<br>
+                    </div>
+                    <div class="commentImg">
+                        <img src="{% static "images/0001.jpg" %}">
                     </div>
                 </div>
                 <div class="divider"></div>
@@ -146,9 +161,10 @@
                     <div class="guest-comment">
                         怎麼會這麼醜？
                     </div>
+                    <div class="commentImg">
+                        <img src="{% static "images/0002.jpg" %}">
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 </body>
 </html>
