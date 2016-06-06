@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from HomePage import views as Home_Views
+from HomePage.views import home
 from ListPage import views as List_Views
 from TripPage import views as Trip_Views
 from GuidePage import views as Guide_Views
@@ -24,7 +24,7 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', Home_Views.home, name='home'),
+    url(r'^$', home, name='home'),
     url(r'^accounts/register/', register, name='register'),
     url(r'^accounts/login/', login, name='login'),
     url(r'^finish/', finish, name='finish'),
