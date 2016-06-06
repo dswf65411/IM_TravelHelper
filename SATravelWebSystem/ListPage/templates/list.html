@@ -73,147 +73,53 @@
 				</ul>
 			</li>
 		</div>
-
+		{% for trip in trips %}
 		<a href="{% url "trip" %}" class="tourlink">
 			<div class="tourlist">
 				<div class="tourpFrame">
-					<img class="tourp" src="{% static "images/0001.jpg" %}">
+					<img class="tourp" src="{% static "images/" %}{{trip.image}}">
 				</div>
 				<div class="tourtitle">
-					[ {{name}}真實體驗營 ] 腳踏車繞校園＋小木屋鬆餅＋{{name}}鮮奶
+					{{ trip.tourTitle }}
 				</div>
 				<div class="tourplace">
 					<img class="tourplacep" src="{% static "images/category.png" %}">
-					<h1>觀光行程、一日遊、美食購物</h1>
+					<h1>
+						{{ trip.categories|join:"、" }}
+					</h1>
 				</div>
 				<div class="tourhour">
 					<img class="tourplacep" src="{% static "images/clock.png" %}">
-					<h1>3小時</h1>
+					<h1>{{trip.tourHour}}小時</h1>
 				</div>
 				<div class="starbox">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/starGrey.png" %}">
-					<div class="mainColor">3&nbsp</div>則評論
+					{% for counter in 5|times %}
+					    {% if counter < trip.star %}
+					    <img class="tourplacep" src="{% static "images/star.png" %}">
+						{% else %}
+						<img class="tourplacep" src="{% static "images/starGrey.png" %}">
+					    {% endif %}
+					{% endfor %}
+					<div class="mainColor">{{trip.commentCounter}}&nbsp</div>則評論
 				</div>
 				<div class="price">
 					<h1 id="dollar">NTD</h1>
-					<h1 id="price">1000</h1>
+					<h1 id="price">{{ trip.price }}</h1>
 				</div>
 				<div class="tag">
+					{% if trip.hot %}
 					<span id="tag">熱門</span>
+					{% endif %}
+					{% if trip.recommend %}
 					<span id="tag">推薦</span>
+					{% endif %}
 				</div>
 			</div>
 		</a>
-		<div class="space"></div>
-
-		<a href="{% url "trip" %}" class="tourlink">
-			<div class="tourlist">
-				<div class="tourpFrame">
-					<img class="tourp" src="{% static "images/0002.jpg" %}">
-				</div>
-				<div class="tourtitle">
-					{{name}}風光體驗，湖邊觀景。校內人文介紹與導覽，經驗豐富的學生導遊帶你認識台大
-				</div>
-				<div class="tourplace">
-					<img class="tourplacep" src="{% static "images/category.png" %}">
-					<h1>戶外活動、自然景觀、文化藝術</h1>
-				</div>
-				<div class="tourhour">
-					<img class="tourplacep" src="{% static "images/clock.png" %}">
-					<h1>3小時</h1>
-				</div>
-				<div class="starbox">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/starGrey.png" %}">
-					<img class="tourplacep" src="{% static "images/starGrey.png" %}">
-					<div class="mainColor">0&nbsp</div>則評論
-				</div>
-				<div class="price">
-					<h1 id="dollar">NTD</h1>
-					<h1 id="price">800</h1>
-				</div>
-				<div class="tag">
-				</div>
-			</div>
-		</a>
-		<div class="space"></div>
-
-		<a href="{% url "trip" %}" class="tourlink">
-			<div class="tourlist">
-				<div class="tourpFrame">
-					<img class="tourp" src="{% static "images/0003.jpg" %}">
-				</div>
-				<div class="tourtitle">
-					{{name}}特色行程與學生最愛的美食！
-				</div>
-				<div class="tourplace">
-					<img class="tourplacep" src="{% static "images/category.png" %}">
-					<h1>美食購物</h1>
-				</div>
-				<div class="tourhour">
-					<img class="tourplacep" src="{% static "images/clock.png" %}">
-					<h1>3小時</h1>
-				</div>
-				<div class="starbox">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<div class="mainColor">30&nbsp</div>則評論
-				</div>
-				<div class="price">
-					<h1 id="dollar">NTD</h1>
-					<h1 id="price">500</h1>
-				</div>
-				<div class="tag">
-					<span id="tag">熱門</span>
-					<span id="tag">推薦</span>
-				</div>
-			</div>
-		</a>
-		<div class="space"></div>
-
-		<a href="{% url "trip" %}" class="tourlink">
-			<div class="tourlist">
-				<div class="tourpFrame">
-					<img class="tourp" src="{% static "images/0004.jpg" %}">
-				</div>
-				<div class="tourtitle">
-					{{name}}最著名的學生導遊，帶你到別人不知道的私房景點
-				</div>
-				<div class="tourplace">
-					<img class="tourplacep" src="{% static "images/category.png" %}">
-					<h1>文化藝術、觀光行程</h1>
-				</div>
-				<div class="tourhour">
-					<img class="tourplacep" src="{% static "images/clock.png" %}">
-					<h1>3小時</h1>
-				</div>
-				<div class="starbox">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/star.png" %}">
-					<img class="tourplacep" src="{% static "images/starGrey.png" %}">
-					<img class="tourplacep" src="{% static "images/starGrey.png" %}">
-					<div class="mainColor">2&nbsp</div>則評論
-				</div>
-				<div class="price">
-					<h1 id="dollar">NTD</h1>
-					<h1 id="price">1200</h1>
-				</div>
-				<div class="tag">
-					<span id="tag">熱門</span>
-				</div>
-			</div>
-		</a>
-		<div class="space"></div>
+			{% if not forloop.last %}
+		    <div class="space"></div>
+			{% endif %}
+		{% endfor %}
 	</div>
 </body>
 </html>
