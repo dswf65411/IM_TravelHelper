@@ -1,0 +1,84 @@
+
+
+.addIntro {
+    margin-left: 80px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.addIntro h1 {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+#calendar {
+    position: absolute;
+    top: 50px;
+    width: 270px;
+    margin-left: 120px;
+}
+
+.addTripDiv {
+    width: 700px;
+    height: 250px;
+    margin-left: 80px;
+    background: rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.addPhoto {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: grey;
+    top: 25px;
+    left: 25px;
+}
+
+.writeIntro {
+    position: relative;
+    display: inline-block;
+    font-size: 1.15em;
+}
+
+#introWriting {
+    width: 550px;
+    height: 160px;
+}
+
+#travelWriting {
+    left: 50px;
+    top: 50px;
+    vertical-align: top;
+    width: 350px;
+    height: 140px;
+}
+
+input[type="submit"].submitBtn {
+    margin-top: 0;
+    margin-left: 80px;
+    width: 90px;
+}
+
+
+/* Hide file input */
+#id_image_large {
+    display: none;
+}
+/* Custom upload button appearance*/
+#upload {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    left: 30px;
+    top: 30px;
+    display: inline-block;
+    width: 138px;
+    height: 138px;
+    background: url(https://firefox.club.tw/static/img/event/every-moment/upload/upload-pic.png);
+}
+
+
+
+

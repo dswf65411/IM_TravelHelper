@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/reset.css" %}">
+    <link rel="stylesheet" href="{% static "css/global.css" %}">
+    <link rel="stylesheet" href="{% static "css/addTrip.css" %}">
+    <title>新增行程</title>
+</head>
+<script>
+
+
+    $(document).ready(function() {
+
+        function loadImage(e) {
+            var image = new Image();
+            image.src = e.target.result;
+        }
+        function previewImage() {
+            var reader = new FileReader();
+            var file = document.getElementById("id_image_large").files[0];
+            reader.readAsDataURL(file);
+            reader.onload = loadImage;
+        }
+        $("#id_image_large").change(previewImage);
+
+    });
+
+
+</script>
+
+<body>
+    <form>
+        <div class="addIntro">
+            <h1>行程簡介</h1>
+            <textarea class="writeIntro" id="introWriting"></textarea>
+            <img id="calendar" src="{% static "images/calendar.png" %}">
+        </div>
+
+        <div class="addTripDiv">
+            <div class="addPhoto">
+                <label class="choose-file" id="upload" for="id_image_large"></label>
+                <input type="file" id="id_image_large" name="image_large">
+            </div>
+            <textarea class="writeIntro" id="travelWriting"></textarea>
+        </div>
+
+        <div class="addTripDiv">
+            <div class="addPhoto">
+                <label class="choose-file" id="upload" for="id_image_large"></label>
+                <input type="file" id="id_image_large" name="image_large">
+            </div>
+            <textarea class="writeIntro" id="travelWriting"></textarea>
+        </div>
+
+        <div class="addTripDiv">
+            <div class="addPhoto">
+                <label class="choose-file" id="upload" for="id_image_large"></label>
+                <input type="file" id="id_image_large" name="image_large">
+            </div>
+            <textarea class="writeIntro" id="travelWriting"></textarea>
+        </div>
+
+        <input type="submit" class="submitBtn">
+    </form>
+
+</body>
+
+</html>
