@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ListPage',
     'TripPage',
     'GuidePage',
+    'AddTripPage',
 ]
 
 MIDDLEWARE_CLASSES = [

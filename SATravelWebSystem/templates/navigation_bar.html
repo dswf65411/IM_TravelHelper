@@ -11,7 +11,12 @@
         <img src="{% static "images/user.png" %}" />
         <p>{{request.user}}</p> <!-- user name -->
         <ul>
-            <li>設定</li>
+            <a href="{% url "addTrip" %}">
+                <li>發表行程</li>
+            </a>
+            <a href="">
+                <li>個人資料</li>
+            </a>
             <a href="{% url "logout" %}">
                 <li>
                     登出
