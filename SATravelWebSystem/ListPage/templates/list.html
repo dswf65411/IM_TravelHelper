@@ -67,8 +67,12 @@
 		<div class="rank">
 			<li id="rank">排序 熱門度高到低
 				<ul>
-					<li>價格：高 到 低</li>
-					<li>價格：低 到 高</li>
+					<a href="{% url "list" %}?region={{region}}&school={{name}}&order=-price">
+						<li>價格：高 到 低</li>
+					</a>
+					<a href="{% url "list" %}?region={{region}}&school={{name}}&order=price">
+						<li>價格：低 到 高</li>
+					</a>
 					<li>熱門度高到低</li>
 				</ul>
 			</li>

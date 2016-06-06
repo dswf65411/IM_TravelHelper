@@ -53,4 +53,12 @@ def list(request):
             'image': '0004.jpg'
         }
         trips = [trip1, trip2, trip3, trip4]
+        if 'order' in request.GET and request.GET['order'] != '':
+            order = request.GET['order']
+            if order == 'hot':
+                trips = sorted(trips, key=lambda k: k['price'])
+            elif order == 'price':
+                trips = sorted(trips, key=lambda k: k['price'])
+            elif order == '-price':
+                trips = sorted(trips, key=lambda k: k['price'], reverse = True)
     return  render(request, 'list.html', locals())
