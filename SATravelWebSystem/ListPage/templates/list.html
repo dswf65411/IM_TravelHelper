@@ -18,11 +18,9 @@
 			<h1 id="choose">請選擇地區</h1>
 			<li class="category">{{region}}
 				<ul>
-					<li class="hoverColor">台北</li>
-					<li>新竹</li>
-					<li>台中</li>
-					<li>台南</li>
-					<li>高雄</li>
+					{% for item in regions %}
+					    <li class="hoverColor">{{ item }}</li>
+					{% endfor %}
 				</ul>
 			</li>
 		</div>
@@ -62,7 +60,7 @@
 	</div>
 	<div class="tour" id="listPageBackground">
 		<div class="intro">
-			<h1><div class="mainColor">100</div> 項體驗行程 - - {{region}} , {{name}}</h1>
+			<h1><div class="mainColor">{{ trips|length }}</div> 項體驗行程 - - {{region}} , {{name}}</h1>
 		</div>
 		<div class="rank">
 			<li id="rank">排序 熱門度高到低
@@ -73,7 +71,9 @@
 					<a href="{% url "list" %}?region={{region}}&school={{name}}&order=price">
 						<li>價格：低 到 高</li>
 					</a>
-					<li>熱門度高到低</li>
+					<a href="{% url "list" %}?region={{region}}&school={{name}}&order=hot">
+						<li>熱門度高到低</li>
+					</a>
 				</ul>
 			</li>
 		</div>

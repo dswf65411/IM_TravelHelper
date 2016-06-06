@@ -8,6 +8,8 @@ def list(request):
     if 'region' in request.GET and request.GET['region'] != '' and 'school' in request.GET and request.GET['school'] != '':
         region = request.GET['region']
         name = request.GET['school']
+        regions = ['台北', '新竹', '台中', '台南', '高雄']
+        regions.remove(region)
         trip1 = {
             'tourTitle': '[ %s真實體驗營 ] 腳踏車繞校園＋小木屋鬆餅＋%s鮮奶'%(name, name),
             'tourHour': 3,
@@ -56,7 +58,7 @@ def list(request):
         if 'order' in request.GET and request.GET['order'] != '':
             order = request.GET['order']
             if order == 'hot':
-                trips = sorted(trips, key=lambda k: k['price'])
+                trips = sorted(trips, key=lambda k: k['hot'], reverse = True)
             elif order == 'price':
                 trips = sorted(trips, key=lambda k: k['price'])
             elif order == '-price':
