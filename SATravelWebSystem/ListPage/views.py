@@ -1,9 +1,10 @@
 from django.shortcuts import render
+from mongoDB.connection import connect
 
 # Create your views here.
 
 def list(request):
-    name = '臺大'
+    name = '台大'
     region = '台北'
     if 'region' in request.GET and request.GET['region'] != '' and 'school' in request.GET and request.GET['school'] != '':
         region = request.GET['region']
@@ -54,7 +55,8 @@ def list(request):
             'categories': ['文化藝術', '觀光行程'],
             'image': '0004.jpg'
         }
-        trips = [trip1, trip2, trip3, trip4]
+        # trips = [trip1, trip2, trip3, trip4]
+        trips = listConnect(region, name)
         if 'order' in request.GET and request.GET['order'] != '':
             order = request.GET['order']
             if order == 'hot':
@@ -64,3 +66,16 @@ def list(request):
             elif order == '-price':
                 trips = sorted(trips, key=lambda k: k['price'], reverse = True)
     return  render(request, 'list.html', locals())
+
+
+def listConnect(region, school):
+    DB = connect()
+    collect = DB[region]
+    temp = collect.find({'name': school },{'trip':1,'_id':0})[0]
+    relist = temp['trip']
+    for item in relist:
+        countingStar = 0
+        for count in item['star']:
+            countingStar += count['score']
+        item['star']=int(countingStar/len(item['star']))
+    return relist

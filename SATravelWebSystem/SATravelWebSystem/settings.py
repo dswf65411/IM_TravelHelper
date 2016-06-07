@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'TripPage',
     'GuidePage',
     'AddTripPage',
+    'mongoDB'
 ]
 
 MIDDLEWARE_CLASSES = [

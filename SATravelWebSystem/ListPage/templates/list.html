@@ -84,7 +84,7 @@
 					<img class="tourp" src="{% static "images/" %}{{trip.image}}">
 				</div>
 				<div class="tourtitle">
-					{{ trip.tourTitle }}
+					{{ trip.title }}
 				</div>
 				<div class="tourplace">
 					<img class="tourplacep" src="{% static "images/category.png" %}">
@@ -94,7 +94,7 @@
 				</div>
 				<div class="tourhour">
 					<img class="tourplacep" src="{% static "images/clock.png" %}">
-					<h1>{{trip.tourHour}}小時</h1>
+					<h1>{{trip.hour}}小時</h1>
 				</div>
 				<div class="starbox">
 					{% for counter in 5|times %}
