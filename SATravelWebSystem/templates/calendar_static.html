@@ -1,0 +1,52 @@
+
+    <script>
+
+        /*
+        $(document).ready(function(){
+            $(".calendarDay tr > td").each(function(i) {
+                if ($(this).html() == "") {$(this).addClass(None)};
+            });
+        });
+        */
+
+        var even = false;
+        var finish = false;
+        $(function() {
+            $(".calendarDay tr > td").each(function(){
+                if ($(this).text() == "") {
+                    $(this).css("background", "white");
+                }
+                else {
+                    $(this).attr('id', $(this).text());
+                };
+
+            });
+
+            $(".calendarDay tr > td").click(function(){
+                $(this).css("background", "rgba(255, 0, 0, 0.5)");
+                $(this).css("color", "white");
+                $(this).css("border", "0px");
+                $(".calendarBox").css("display","none");
+                $("#chooseDay").empty();
+                $("#chooseDay").append("2016 年 6 月 ", $(this).text(), " 日");
+                if($("#chooseDay").text() != "選擇使用日期") { finish = true; }
+                /*
+                var clickDay = Number($(this).text());
+                $(".calendarDay tr > td").click(function(){
+                    if(true) { 
+                        for (var i = Number(clickDay); i <= Number($(this).text()); i++) {
+                            document.getElementById(i).style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+                            document.getElementById(i).style.color = "white";
+                            document.getElementById(i).style.border = "0px";
+                        };
+                        even = true;
+                    }
+                });
+                */
+            });
+
+
+        });
+
+    </script>
+
