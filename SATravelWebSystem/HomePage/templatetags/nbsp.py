@@ -12,3 +12,7 @@ def nbsp(value):
 @register.filter(name='times')
 def times(number):
     return range(number)
+
+@register.filter(name='br')
+def br(value):
+    return mark_safe("<br>".join(value.split('\n')))

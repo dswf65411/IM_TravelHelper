@@ -2,12 +2,14 @@
 <html>
 
 <head>
-    <meta charset="utf-8"> {% load staticfiles %}
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    {% load nbsp %}
     <link rel="stylesheet" href="{% static "css/reset.css" %}">
     <link rel="stylesheet" href="{% static "css/global.css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <link rel="stylesheet" href="{% static "css/calendar.css" %}" type="text/css">
-    <title>台大真實體驗營</title>
+    <title>{{trip.title}}</title>
     {% include "navigation_static_file.html" %}
     {% include "calendar_static.html" %}
 </head>
@@ -56,7 +58,7 @@
                 $(".calendarBox").css("display","none");
             };
             if (finish) {
-                $(".calendarBox").css("display","none");  
+                $(".calendarBox").css("display","none");
             };
             count++;
         });
@@ -66,7 +68,7 @@
                 alert("已經將導遊聯絡資訊寄送到您的信箱！另外，導遊也將收到出遊通知信。祝您玩得愉快！");
                 window.location.reload("");
             };
-        });     
+        });
     });
 
     function btnCommentClick() {
@@ -84,7 +86,7 @@
 <body>
     {% include "navigation_bar.html" %}
     <div class="cover"></div>
-    <div class="tripTopic">[ 台大真實體驗營 ] 腳踏車繞校園＋小木屋鬆餅＋{{name}}鮮奶</div>
+    <div class="tripTopic">{{trip.title}}</div>
     <div class="container">
         <div class="left-container">
             <div class="upper-container">
@@ -111,7 +113,7 @@
                     <div class="description">
                         <div class="d-title">行程簡介</div>
                         <div class="d-content">
-                            臺大資管學生帶你騎腳踏車遊校園，品嚐台大最夯美食「小木屋鬆餅」，再配上排隊才買得到的台大鮮乳，整趟輕鬆寫意的旅程絕對值回票價！
+                            {{trip.description}}
                             <br>
                         </div>
                     </div>
@@ -125,93 +127,40 @@
                 <div class="tour-content">
                     <div class="content-btn btn-selected" id="tourContent">行程內容</div>
                     <div class="content-btn" id="commentContent">評論</div>
+                    {% for site in sites %}
                     <div class="tour-site">
                         <div class="site-left">
                             <div class="site-name">
-                                <p>小木屋鬆餅</p>
-                                <img class="double-border" src="{% static "images/site1.jpg" %}">
+                                <p>{{site.name}}</p>
+                                <img class="double-border" src="{% static "images/" %}{{site.image}}">
                             </div>
                         </div>
                         <div class="site-right">
                             <div class="t-content">
-                                台大校園的小木屋鬆餅不論是平日還是假日都很多人排隊，最主要是便宜又好吃
-                                <br>
-                                <br> 口味眾多也吸引許多外來遊客前往朝聖，假日也常見到一家大小或 是情侶攜手前往校園散步遊玩，然後人手一份鬆餅坐在樹下品嚐。
-                                <br>
+                                {{site.description|br}}
                             </div>
                         </div>
                     </div>
-                    <div class="tour-site">
-                        <div class="site-left">
-                            <div class="site-name">
-                                <p>大一女舍</p>
-                                <img class="double-border" src="{% static "images/site3.jpg" %}">
-                            </div>
-                        </div>
-                        <div class="site-right">
-                            <div class="t-content">
-                                美食廣場，
-                                <br> 女生宿舍。
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-site">
-                        <div class="site-left">
-                            <div class="site-name">
-                                <p>社科院圖書館</p>
-                                <img class="double-border" src="{% static "images/site2.jpg" %}">
-                            </div>
-                        </div>
-                        <div class="site-right">
-                            <div class="t-content">
-                                本院新大樓由日本知名建築家，2012年普立茲克建築獎 (Pritzker Architecture Prize)得主伊東豐雄(Toyo ITO)建 築師設計，並獲得2013年第35屆臺灣建築佳作獎的榮譽。
-                                <br>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="comment double-border">
+                {% for comment in comments %}
                 <div class="comment-box">
                     <div class="guest">
                         <div class="guest-info">
-                            <img src="{% static "images/guest1.jpg" %}">
-                            <p>David</p>
+                            <img src="{% static "images/" %}{{comment.image}}">
+                            <p>{{comment.name}}</p>
                         </div>
                     </div>
                     <div class="guest-comment">
-                        這些行程都是台大生才知道的私房景點，推薦！
+                        {{comment.comment|br}}
                     </div>
                 </div>
+                {% if not forloop.last %}
                 <div class="divider"></div>
-                <div class="comment-box">
-                    <div class="guest">
-                        <div class="guest-info">
-                            <img src="{% static "images/guest2.jpg" %}">
-                            <p>瑤瑤</p>
-                        </div>
-                    </div>
-                    <div class="guest-comment">
-                        還行啊！
-                        <br>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="comment-box">
-                    <div class="guest">
-                        <div class="guest-info">
-                            <img src="{% static "images/guest3.jpg" %}">
-                            <p>翰伸</p>
-                        </div>
-                    </div>
-                    <div class="guest-comment">
-                        怎麼沒有籃球場？
-                        <br> 怎麼沒有籃球場？
-                        <br> 怎麼沒有籃球場？
-                        <br>
-                    </div>
-                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
         <div class="right-container">
@@ -232,7 +181,7 @@
                         <h1>總金額</h1>
                     </div>
                     <div class="box-upper-right">
-                        <h1>1,500 TWD</h1>
+                        <h1>{{trip.price}} TWD</h1>
                     </div>
                 </div>
                 <div class="box-row">
@@ -248,8 +197,6 @@
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>

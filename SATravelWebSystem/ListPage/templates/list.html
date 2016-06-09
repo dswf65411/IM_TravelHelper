@@ -63,22 +63,18 @@
 			<h1><div class="mainColor">{{ trips|length }}</div> 項體驗行程 - - {{region}} , {{name}}</h1>
 		</div>
 		<div class="rank">
-			<li id="rank">排序 熱門度高到低
+			<li id="rank">排序 {{nowOrder.tag}}
 				<ul>
-					<a href="{% url "list" %}?region={{region}}&school={{name}}&order=-price">
-						<li>價格：高 到 低</li>
+					{% for item in orders %}
+					<a href="{% url "list" %}?region={{region}}&school={{name}}&order={{item.order}}">
+						<li>{{item.tag}}</li>
 					</a>
-					<a href="{% url "list" %}?region={{region}}&school={{name}}&order=price">
-						<li>價格：低 到 高</li>
-					</a>
-					<a href="{% url "list" %}?region={{region}}&school={{name}}&order=hot">
-						<li>熱門度高到低</li>
-					</a>
+					{% endfor %}
 				</ul>
 			</li>
 		</div>
 		{% for trip in trips %}
-		<a href="{% url "trip" %}" class="tourlink">
+		<a href="{% url "trip" %}?region={{region}}&school={{name}}&tripID={{trip.tripID}}" class="tourlink">
 			<div class="tourlist">
 				<div class="tourpFrame">
 					<img class="tourp" src="{% static "images/" %}{{trip.image}}">
@@ -111,10 +107,10 @@
 					<h1 id="price">{{ trip.price }}</h1>
 				</div>
 				<div class="tag">
-					{% if trip.hot %}
+					{% if trip.star > 4 %}
 					<span id="tag">熱門</span>
 					{% endif %}
-					{% if trip.recommend %}
+					{% if trip.star > 3 %}
 					<span id="tag">推薦</span>
 					{% endif %}
 				</div>
