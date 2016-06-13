@@ -20,6 +20,11 @@
                     $(this).attr('id', $(this).text());
                 };
 
+                if (Number($(this).text()) < 13) {
+                    $(this).css("background", "white");
+                    $(this).css("color", "rgba(0, 0, 0, 0.5)");
+                    $(this).css("font-weight", "lighter");
+                }
             });
 
             $(".calendarDay tr > td").click(function(){
@@ -33,7 +38,7 @@
                 /*
                 var clickDay = Number($(this).text());
                 $(".calendarDay tr > td").click(function(){
-                    if(true) { 
+                    if(true) {
                         for (var i = Number(clickDay); i <= Number($(this).text()); i++) {
                             document.getElementById(i).style.backgroundColor = "rgba(255, 0, 0, 0.5)";
                             document.getElementById(i).style.color = "white";
@@ -49,4 +54,3 @@
         });
 
     </script>
-
