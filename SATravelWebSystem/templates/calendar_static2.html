@@ -1,0 +1,41 @@
+
+    <script>
+        var even = false;
+        $(function() {
+            $(".calendarDay tr > td").each(function(){
+                if ($(this).text() == "") {
+                    $(this).css("background", "white");
+                }
+                else {
+                    $(this).attr('id', $(this).text());
+                };
+                
+                if (Number($(this).text()) < 13 ) {
+                    $(this).css("color", "rgba(0, 0, 0, 0.2)");
+                    $(this).css("font-weight", "lighter");
+                    $(this).css("background", "white");
+                };
+            });
+
+            $(".calendarDay tr > td").click(function(){
+                $(this).css("background", "rgba(255, 0, 0, 0.5)");
+                $(this).css("color", "white");
+                $(this).css("border", "0px");
+                var clickDay = Number($(this).text());
+                $(".calendarDay tr > td").click(function(){
+                    if(true) { 
+                        for (var i = Number(clickDay); i <= Number($(this).text()); i++) {
+                            document.getElementById(i).style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+                            document.getElementById(i).style.color = "white";
+                            document.getElementById(i).style.border = "0px";
+                        };
+                        even = true;
+                    }
+                });
+            });
+
+
+        });
+
+    </script>
+

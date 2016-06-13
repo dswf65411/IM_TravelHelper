@@ -394,9 +394,10 @@ h1 {
 
 .commentImg {
     display: inline-block;
+    margin-left: 35%;
 }
 
 .commentImg img {
-    margin-left: 280%;
+    right: 0;
     width: 220px;
 }
