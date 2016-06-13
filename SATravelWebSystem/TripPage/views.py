@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from mongoDB.connection import connect
-from SATravelWebSystem.views import sessionConnect, graceful_auto_reconnect
+from SATravelWebSystem.views import sessionConnect
 
 # Create your views here.
 
 def trip(request):
     if request.session.get('account', '') != '':
         account = request.session.get('account', '')
-        username = graceful_auto_reconnect(sessionConnect(account))
+        username = sessionConnect(account)
     else:
         username = ''
     if 'region' in request.GET and request.GET['region'] != '':
