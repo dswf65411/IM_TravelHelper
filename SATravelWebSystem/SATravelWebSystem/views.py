@@ -4,29 +4,6 @@ from django.shortcuts import render_to_response
 from django.contrib import auth
 from django.template import RequestContext
 from mongoDB.connection import connect
-<<<<<<< HEAD
-=======
-import functools
-import pymongo
-import logging
-import time
-
-MAX_AUTO_RECONNECT_ATTEMPTS = 15
-
-def graceful_auto_reconnect(mongo_op_func):
-  """Gracefully handle a reconnection event."""
-  @functools.wraps(mongo_op_func)
-  def wrapper(*args, **kwargs):
-    for attempt in xrange(MAX_AUTO_RECONNECT_ATTEMPTS):
-      try:
-        return mongo_op_func(*args, **kwargs)
-      except pymongo.errors.AutoReconnect as e:
-        wait_t = 0.5 * pow(2, attempt) # exponential back off
-        logging.warning("PyMongo auto-reconnecting... %s. Waiting %.1f seconds.", str(e), wait_t)
-        time.sleep(wait_t)
-
-  return wrapper
->>>>>>> 01437ad975788b16f5bbb29ac13805f922bf3229
 
 def register(request):
     if request.method == 'POST':
