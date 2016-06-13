@@ -13,7 +13,62 @@
 		<div class="centerBox">
 			<div class="uploadImg"><p>上傳照片</p></div>
 			<table class="typeData">
-				{{ form.as_table }}
+				<tr class="form">
+					<th>
+						<label class="form" for="id_account">帳號:</label>
+					</th>
+					<td>
+						<input id="id_account" maxlength="10" name="account" type="text" />
+					</td>
+				</tr>
+				<tr class="form">
+					<th>
+						<label class="form" for="id_username">姓名:</label>
+					</th>
+					<td>
+						<input id="id_username" maxlength="10" name="username" type="text" />
+					</td>
+				</tr>
+				<tr class="form">
+					<th>
+						<label class="form" for="id_sex">性別:</label>
+					</th>
+					<td>
+						<input id="id_sex" maxlength="5" name="sex" type="text" />
+					</td>
+				</tr>
+				<tr class="form">
+					<th>
+						<label class="form" for="id_phone">電話:</label>
+					</th>
+					<td>
+						<input id="id_phone" maxlength="10" name="phone" type="text" />
+					</td>
+				</tr>
+				<tr class="form">
+					<th>
+						<label class="form" for="id_password1">密碼:</label>
+					</th>
+					<td>
+						<input id="id_password1" name="password1" type="password" />
+					</td>
+				</tr>
+				<tr class="form">
+					<th>
+						<label class="form" for="id_password2">驗證密碼:</label>
+					</th>
+					<td>
+						<input id="id_password2" name="password2" type="password" />
+					</td>
+				</tr>
+				<tr class="form">
+					<th>
+						<label class="form" for="id_email">信箱:</label>
+					</th>
+					<td>
+						<input id="id_email" maxlength="75" name="email" type="email" />
+					</td>
+				</tr>
 			</table>
 		</div>
 		<div class="centerBox">
