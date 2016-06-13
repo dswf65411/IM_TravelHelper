@@ -9,7 +9,7 @@ import pymongo
 import logging
 import time
 
-MAX_AUTO_RECONNECT_ATTEMPTS = 5
+MAX_AUTO_RECONNECT_ATTEMPTS = 15
 
 def graceful_auto_reconnect(mongo_op_func):
   """Gracefully handle a reconnection event."""
