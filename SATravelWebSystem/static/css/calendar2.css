@@ -1,0 +1,63 @@
+
+
+.calendarBox {
+    font-family: sans-serif;
+    display: inline-block;
+    width: 224px;
+    height: 286px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.calendarBox h1 {
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 50px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.week {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.week p {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.calendarDay {
+    border-collapse: collapse;
+    line-height: 34px;
+}
+
+.calendarDay td {
+    width: 32px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.calendarDay td:hover {
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+}
+
+td.None:hover {
+    background: white;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

@@ -6,37 +6,20 @@
     <link rel="stylesheet" href="{% static "css/reset.css" %}">
     <link rel="stylesheet" href="{% static "css/global.css" %}">
     <link rel="stylesheet" href="{% static "css/addTrip.css" %}">
+    <link rel="stylesheet" href="{% static "css/calendar2.css" %}" type="text/css">
     <title>新增行程</title>
 </head>
-<script>
-
-
-    $(document).ready(function() {
-
-        function loadImage(e) {
-            var image = new Image();
-            image.src = e.target.result;
-        }
-        function previewImage() {
-            var reader = new FileReader();
-            var file = document.getElementById("id_image_large").files[0];
-            reader.readAsDataURL(file);
-            reader.onload = loadImage;
-        }
-        $("#id_image_large").change(previewImage);
-
-    });
-
-
-</script>
+{% include "navigation_static_file.html" %}
+{% include "calendar_static2.html" %}
 
 <body>
     <form>
         <div class="addIntro">
             <h1>行程簡介</h1>
             <textarea class="writeIntro" id="introWriting"></textarea>
-            <img id="calendar" src="{% static "images/calendar.png" %}">
+            <!--<img id="calendar" src="{% static "images/calendar.png" %}">-->
         </div>
+        {% include "calendar2.html" %}
 
         <div class="addTripDiv">
             <div class="addPhoto">
