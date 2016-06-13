@@ -3,6 +3,19 @@ a {
 	text-decoration: none;
 }
 
+
+
+.errorlist {
+	display: inline-block;
+	float: right;
+	font-size: 0.9em;
+	line-height: 35px;
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;
+	vertical-align: center;
+}
+
 .centerBox {
 	position: relative;
 	width: 80%;
