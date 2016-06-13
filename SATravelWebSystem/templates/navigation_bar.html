@@ -6,10 +6,10 @@
             <p>旅人幫</p>
         </div>
     </a>
-    {% if request.user.is_authenticated %}
+    {% if username != '' %}
     <div class="button floatRight" id="userBtn">
         <img src="{% static "images/user.png" %}" />
-        <p>{{request.user}}</p> <!-- user name -->
+        <p>{{username}}</p> <!-- user name -->
         <ul>
             <a href="{% url "addTrip" %}">
                 <li>發表行程</li>

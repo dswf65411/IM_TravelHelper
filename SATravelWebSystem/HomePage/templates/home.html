@@ -34,7 +34,6 @@
                     找尋喜歡的行程與導遊
                 </div>
                 <div class="tour-row">
-                    
                     {% for top_region in top_regions %}
                     {% if top_region.name == "台  大" %}
                     <a href="{% url "list" %}?region={{top_region.region}}&school={{top_region.school}}">
@@ -44,7 +43,6 @@
                         <div class="each-region">
                             {% if top_region.name != "台  大" %}
                             <div class="blackView">
-
                             </div>
                             {% endif %}
 
@@ -55,11 +53,11 @@
                             {% endif %}
                                 {{top_region.name|nbsp}}
                             </div>
-                            <img class="region-img" src="{{top_region.image}}" />
+                            <img class="region-img" src="{{top_region.image}}"/>
                         </div>
                     </a>
                     {% endfor %}
-                    
+
                     <!--
                     <a href="{% url "list" %}?region={{top_region.region}}&school={{top_region.school}}">
                         <div class="each-region">

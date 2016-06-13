@@ -1,9 +1,15 @@
 from django.shortcuts import render
 from mongoDB.connection import connect
+from SATravelWebSystem.views import sessionConnect
 
 # Create your views here.
 
 def list(request):
+    if request.session.get('account', '') != '':
+        account = request.session.get('account', '')
+        username = sessionConnect(account)
+    else:
+        username = ''
     name = '台大'
     region = '台北'
     if 'region' in request.GET and request.GET['region'] != '' and 'school' in request.GET and request.GET['school'] != '':
